@@ -2,13 +2,13 @@
 
 ## Current Status
 
-- Stage: Authentication and users foundation complete.
-- Current epic: EPIC-04.
+- Stage: Content domain and CMS foundation implemented, awaiting local validation.
+- Current epic: EPIC-05.
 - Latest completed feature: FEAT-04.03.
-- Active feature: None.
+- Active feature: FEAT-05.01.
 - Production deployment: Not configured.
-- Database migrations: Applied auth foundation migration to local database.
-- Open blockers: None.
+- Database migrations: Applied auth foundation migration to local database. Content foundation migration created but not yet applied in this turn.
+- Open blockers: Node.js and pnpm are not available on PATH in the current shell, blocking Prisma generation and validation commands.
 
 ## Decisions Locked
 
@@ -27,7 +27,7 @@
 
 ## Next Recommended Action
 
-Start Epic 05: Content domain and CMS foundation. Add content schema, migrations, and basic learning content CRUD endpoints.
+Restore Node.js and pnpm on PATH, then validate FEAT-05.01 with Prisma generation, lint, typecheck, build, and handoff validation.
 
 ## Progress Checklist
 
@@ -52,6 +52,8 @@ Start Epic 05: Content domain and CMS foundation. Add content schema, migrations
 - [x] Auth domain models and DTOs added.
 - [x] Registration and login endpoints added.
 - [x] Session management, refresh token rotation, and profile endpoints added.
+- [x] Content domain schema and admin content endpoints implemented.
+- [ ] FEAT-05.01 validation completed after Node.js/pnpm PATH is restored.
 
 See [TODO.md](TODO.md) for the detailed action list and tick-box tracker.
 
@@ -71,3 +73,4 @@ See [TODO.md](TODO.md) for the detailed action list and tick-box tracker.
 - FEAT-04.01 - Add auth domain and DTOs: [docs/handoffs/EPIC-04/FEAT-04.01-auth-domain-models-and-dtos.md](docs/handoffs/EPIC-04/FEAT-04.01-auth-domain-models-and-dtos.md)
 - FEAT-04.02 - Add registration and login endpoints: [docs/handoffs/EPIC-04/FEAT-04.02-registration-and-login-endpoints.md](docs/handoffs/EPIC-04/FEAT-04.02-registration-and-login-endpoints.md)
 - FEAT-04.03 - Session management and profile basics: [docs/handoffs/EPIC-04/FEAT-04.03-session-management-and-profile-basics.md](docs/handoffs/EPIC-04/FEAT-04.03-session-management-and-profile-basics.md)
+- FEAT-05.01 - Content domain models and admin endpoints: [docs/handoffs/EPIC-05/FEAT-05.01-content-domain-models-and-admin-endpoints.md](docs/handoffs/EPIC-05/FEAT-05.01-content-domain-models-and-admin-endpoints.md)
