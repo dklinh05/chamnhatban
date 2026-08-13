@@ -4,7 +4,6 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { ContentAuditAction, ContentStatus, Prisma } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateContentItemDto, UpdateContentItemDto } from './dto/content-item.dto';
 import { CreateContentLessonDto, UpdateContentLessonDto } from './dto/content-lesson.dto';
@@ -163,17 +162,17 @@ export class ContentService {
     const lesson = await this.getLesson(id);
     this.validatePublishableLesson(lesson);
 
-    return this.prisma.$transaction(async (tx) => {
+    return this.prisma.$transaction(async (tx: PrismaService) => {
       const published = await tx.contentLesson.update({
         where: { id },
         data: {
-          status: ContentStatus.PUBLISHED,
+          status: 'PUBLISHED',
           publishedAt: new Date(),
           archivedAt: null,
           items: {
             updateMany: {
               where: { lessonId: id },
-              data: { status: ContentStatus.PUBLISHED },
+              data: { status: 'PUBLISHED' },
             },
           },
         },
@@ -184,7 +183,7 @@ export class ContentService {
         data: {
           lessonId: id,
           actorId,
-          action: ContentAuditAction.PUBLISH,
+          action: 'PUBLISH',
         },
       });
 
@@ -195,16 +194,16 @@ export class ContentService {
   async archiveLesson(id: string, actorId: string) {
     await this.getLesson(id);
 
-    return this.prisma.$transaction(async (tx) => {
+    return this.prisma.$transaction(async (tx: PrismaService) => {
       const archived = await tx.contentLesson.update({
         where: { id },
         data: {
-          status: ContentStatus.ARCHIVED,
+          status: 'ARCHIVED',
           archivedAt: new Date(),
           items: {
             updateMany: {
               where: { lessonId: id },
-              data: { status: ContentStatus.ARCHIVED },
+              data: { status: 'ARCHIVED' },
             },
           },
         },
@@ -215,7 +214,7 @@ export class ContentService {
         data: {
           lessonId: id,
           actorId,
-          action: ContentAuditAction.ARCHIVE,
+          action: 'ARCHIVE',
         },
       });
 
@@ -242,7 +241,7 @@ export class ContentService {
   }
 
   private throwKnownWriteError(error: unknown): never | void {
-    if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002') {
+    if (isPrismaKnownRequestError(error, 'P2002')) {
       throw new ConflictException('Content slug or order already exists.');
     }
   }
@@ -255,4 +254,13 @@ export class ContentService {
       orderBy: { createdAt: 'desc' as const },
     },
   };
+}
+
+function isPrismaKnownRequestError(error: unknown, code: string): boolean {
+  return (
+    typeof error === 'object' &&
+    error !== null &&
+    'code' in error &&
+    (error as { code?: unknown }).code === code
+  );
 }

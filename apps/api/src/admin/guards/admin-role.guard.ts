@@ -1,5 +1,5 @@
 import { CanActivate, ExecutionContext, ForbiddenException, Injectable } from '@nestjs/common';
-import { UserRole } from '@prisma/client';
+import { UserRole } from '../../auth/auth.types';
 
 @Injectable()
 export class AdminRoleGuard implements CanActivate {
@@ -8,7 +8,7 @@ export class AdminRoleGuard implements CanActivate {
       user?: { role?: UserRole };
     }>();
 
-    if (request.user?.role === UserRole.ADMIN) {
+    if (request.user?.role === 'ADMIN') {
       return true;
     }
 

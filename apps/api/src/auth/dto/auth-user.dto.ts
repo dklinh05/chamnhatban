@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { UserRole, UserStatus } from '@prisma/client';
+import { USER_ROLES, USER_STATUSES, UserRole, UserStatus } from '../auth.types';
 
 export class AuthUserDto {
   @ApiProperty()
@@ -11,10 +11,10 @@ export class AuthUserDto {
   @ApiProperty({ nullable: true })
   displayName!: string | null;
 
-  @ApiProperty({ enum: UserRole })
+  @ApiProperty({ enum: USER_ROLES })
   role!: UserRole;
 
-  @ApiProperty({ enum: UserStatus })
+  @ApiProperty({ enum: USER_STATUSES })
   status!: UserStatus;
 
   @ApiProperty()

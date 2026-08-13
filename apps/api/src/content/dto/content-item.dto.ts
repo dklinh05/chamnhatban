@@ -1,6 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { ContentItemType } from '@prisma/client';
 import { IsEnum, IsInt, IsOptional, IsString, Matches, Min } from 'class-validator';
+import { CONTENT_ITEM_TYPES, ContentItemType } from '../content.types';
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -10,8 +10,8 @@ export class CreateContentItemDto {
   @Matches(slugPattern)
   slug!: string;
 
-  @ApiProperty({ enum: ContentItemType })
-  @IsEnum(ContentItemType)
+  @ApiProperty({ enum: CONTENT_ITEM_TYPES })
+  @IsEnum(CONTENT_ITEM_TYPES)
   type!: ContentItemType;
 
   @ApiProperty({ example: 1 })
@@ -63,9 +63,9 @@ export class UpdateContentItemDto {
   @Matches(slugPattern)
   slug?: string;
 
-  @ApiPropertyOptional({ enum: ContentItemType })
+  @ApiPropertyOptional({ enum: CONTENT_ITEM_TYPES })
   @IsOptional()
-  @IsEnum(ContentItemType)
+  @IsEnum(CONTENT_ITEM_TYPES)
   type?: ContentItemType;
 
   @ApiPropertyOptional({ example: 1 })

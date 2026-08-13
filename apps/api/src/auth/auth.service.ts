@@ -1,8 +1,8 @@
 import { ConflictException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { Prisma, UserRole, UserStatus } from '@prisma/client';
 import * as argon2 from 'argon2';
 import { PrismaService } from '../prisma/prisma.service';
+import { UserRole, UserStatus } from './auth.types';
 import { LoginDto, RegisterDto } from './dto';
 import { SessionService } from './session.service';
 
@@ -63,7 +63,7 @@ export class AuthService {
         refreshExpiresAt: session.expiresAt,
       };
     } catch (error) {
-      if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002') {
+      if (isPrismaKnownRequestError(error, 'P2002')) {
         throw new ConflictException('Email is already registered.');
       }
 
@@ -89,7 +89,7 @@ export class AuthService {
       throw new UnauthorizedException('Invalid email or password.');
     }
 
-    if (user.status === UserStatus.DISABLED) {
+    if (user.status === 'DISABLED') {
       throw new UnauthorizedException('This account has been disabled.');
     }
 
@@ -155,4 +155,13 @@ export class AuthService {
       timezone: user.timezone,
     };
   }
+}
+
+function isPrismaKnownRequestError(error: unknown, code: string): boolean {
+  return (
+    typeof error === 'object' &&
+    error !== null &&
+    'code' in error &&
+    (error as { code?: unknown }).code === code
+  );
 }
