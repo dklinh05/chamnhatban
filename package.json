@@ -1,0 +1,36 @@
+{
+  "name": "chamnhatban-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "setup": "pnpm install",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md}\"",
+    "format": "pnpm -w -r run format:workspace",
+    "format:workspace": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "lint": "pnpm -w -r run lint:workspace",
+    "lint:workspace": "eslint . --report-unused-disable-directives --max-warnings=0",
+    "typecheck": "pnpm -w -r run typecheck:pkg",
+    "typecheck:pkg": "tsc -p tsconfig.base.json --noEmit",
+    "test": "pnpm -w -r exec -- node -e \"console.log('No package-level tests configured')\"",
+    "test:e2e": "node scripts/no-e2e-configured.cjs",
+    "build": "turbo run build",
+    "handoff:validate": "node scripts/validate-handoffs.cjs",
+    "infra:up": "powershell -ExecutionPolicy Bypass -File scripts/infra-up.ps1",
+    "infra:down": "powershell -ExecutionPolicy Bypass -File scripts/infra-down.ps1",
+    "infra:status": "powershell -ExecutionPolicy Bypass -File scripts/infra-status.ps1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
+    "eslint": "^8.47.0",
+    "prettier": "^2.8.8",
+    "turbo": "^1.10.5",
+    "typescript": "^5.4.2"
+  }
+}

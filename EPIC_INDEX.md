@@ -1,0 +1,23 @@
+# Epic Index
+
+- `EPIC-00` — Product baseline and UX map.
+- `EPIC-01` — Repository and agent governance.
+- `EPIC-02` — CI/CD and local infrastructure.
+- `EPIC-03` — Design system and i18n.
+- `EPIC-04` — Authentication and users.
+- `EPIC-05` — Content domain and CMS foundation.
+- `EPIC-06` — Learning path and dashboard.
+- `EPIC-07` — Hiragana.
+- `EPIC-08` — Katakana.
+- `EPIC-09` — Vocabulary.
+- `EPIC-10` — Grammar.
+- `EPIC-11` — Kanji.
+- `EPIC-12` — Flashcards and SRS.
+- `EPIC-13` — Quiz engine.
+- `EPIC-14` — Progress and streaks.
+- `EPIC-15` — CMS content operations.
+- `EPIC-16` — Quality, security, accessibility, observability.
+- `EPIC-17` — Deployment and launch.
+- `EPIC-18` — Mobile.
+- `EPIC-19` — Google Login.
+- `EPIC-20` — Post-MVP candidates.
