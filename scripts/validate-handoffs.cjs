@@ -47,7 +47,7 @@ const requiredFiles = [
 
 const requiredRootMarkers = [
   'Latest completed feature: FEAT-04.03',
-  '- Open blockers: None.'
+  '- Open blockers: Node.js and pnpm are not available on PATH in the current shell, blocking Prisma generation and validation commands.'
 ];
 
 const requiredTodoMarkers = [
