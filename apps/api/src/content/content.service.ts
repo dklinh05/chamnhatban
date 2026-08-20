@@ -7,6 +7,7 @@ import {
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateContentItemDto, UpdateContentItemDto } from './dto/content-item.dto';
 import { CreateContentLessonDto, UpdateContentLessonDto } from './dto/content-lesson.dto';
+import { Prisma } from '@prisma/client';
 
 @Injectable()
 export class ContentService {
@@ -201,7 +202,7 @@ export class ContentService {
     const lesson = await this.getLesson(id);
     this.validatePublishableLesson(lesson);
 
-    return this.prisma.$transaction(async (tx) => {
+    return this.prisma.$transaction(async (tx: Prisma.TransactionClient) => {
       const published = await tx.contentLesson.update({
         where: { id },
         data: {
@@ -233,7 +234,7 @@ export class ContentService {
   async archiveLesson(id: string, actorId: string) {
     await this.getLesson(id);
 
-    return this.prisma.$transaction(async (tx) => {
+    return this.prisma.$transaction(async (tx: Prisma.TransactionClient) => {
       const archived = await tx.contentLesson.update({
         where: { id },
         data: {

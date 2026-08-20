@@ -1,5 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
+import { Prisma } from '@prisma/client';
 
 @Injectable()
 export class ProgressService {
@@ -26,7 +27,7 @@ export class ProgressService {
     }
 
     return {
-      completedLessonIds: progresses.map((p) => p.lessonId),
+      completedLessonIds: progresses.map((p: { lessonId: string }) => p.lessonId),
       currentStreak: user.currentStreak,
       longestStreak: user.longestStreak,
       lastActiveDate: user.lastActiveDate,
@@ -51,7 +52,7 @@ export class ProgressService {
     const timezone = user.timezone || 'Asia/Ho_Chi_Minh';
     const localDateStr = this.getLocalDateString(timezone);
 
-    return this.prisma.$transaction(async (tx) => {
+    return this.prisma.$transaction(async (tx: Prisma.TransactionClient) => {
       // 1. Add LessonProgress if not exists
       const existingProgress = await tx.lessonProgress.findUnique({
         where: {
@@ -140,7 +141,7 @@ export class ProgressService {
     const timezone = user.timezone || 'Asia/Ho_Chi_Minh';
     const localDateStr = this.getLocalDateString(timezone);
 
-    await this.prisma.$transaction(async (tx) => {
+    await this.prisma.$transaction(async (tx: Prisma.TransactionClient) => {
       const existingActivity = await tx.dailyActivity.findUnique({
         where: {
           userId_date: { userId, date: localDateStr },
