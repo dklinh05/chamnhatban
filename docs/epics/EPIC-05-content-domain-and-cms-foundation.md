@@ -1,6 +1,6 @@
-﻿# EPIC-05 — Content domain and CMS foundation
+# EPIC-05 — Content domain and CMS foundation
 
-Status: in progress
+Status: completed
 
 ## Summary
 

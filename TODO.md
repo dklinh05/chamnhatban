@@ -154,14 +154,64 @@ Use this file as the main checklist for future implementation. Tick items when c
 - [x] Add content domain models and Prisma migrations.
 - [x] Add initial content admin endpoints.
 - [x] Add publish/archive validation.
-- [ ] Apply content foundation migration locally.
+- [x] Apply content foundation migration locally.
 
 ### Epic 06 - Learning path and learner dashboard
 
-- [ ] Add initial lesson and vocabulary content endpoints.
-- [ ] Add the first learning experience flow in the web app.
+- [x] Add initial lesson and vocabulary content endpoints.
+- [x] Add the first learning experience flow in the web app.
+
+### Epic 07 - Hiragana module
+
+- [x] Seed database with Hiragana lessons and KANA characters.
+- [x] Implement visual interactive Hiragana Gojuon chart with detail modals and TTS audio.
+- [x] Implement client-side randomized row practice session with type/choice questions and sound feedback.
+- [x] Connect Hiragana practice completion with server-side streak updates and dashboard stats.
+
+### Epic 08 - Katakana module
+
+- [x] Seed database with Katakana lessons and KANA characters.
+- [x] Implement visual interactive Katakana Gojuon chart with detail modals and TTS audio.
+- [x] Ensure practice page supports katakana-* slugs and routes back to /katakana correctly.
+- [x] Fix hardcoded Hiragana labels in practice page to be script-agnostic.
+- [x] Dashboard integration showing Katakana progress stats and link.
+- [x] Fix Katakana ContentItem slug collision (kt- prefix namespace).
+
+### Epic 09 - Vocabulary module
+
+- [x] Seed database with 10 N5 thematic vocabulary lessons (78 vocabulary items).
+- [x] Create vocabulary hub page at /vocabulary with themed cards and completion badges.
+- [x] Enhance lesson detail page to render rich VOCABULARY item cards (Japanese, reading, TTS, meaning, example).
+- [x] Add back navigation from vocab lesson detail to /vocabulary.
+- [x] Dashboard integration with Vocabulary N5 section card and completedVocabCount / 10 progress.
+- [x] Exclude vocab lessons from generic dashboard lessons list.
+- [x] Add vocabulary CSS styles (hub grid, item cards, TTS button, meaning, example).
+
+### Epic 10 - Grammar module
+
+- [x] Seed database with 5 N5 thematic grammar lessons (16 rules).
+- [x] Enhance lesson detail page to render rich GRAMMAR cards with TTS support.
+- [x] Update Dashboard to show a dedicated "Ngữ pháp N5" section with only grammar lessons.
+- [x] Add grammar CSS styles and line break preserving in CSS.
+
+### Epic 11 - Kanji module
+
+- [x] Seed database with 5 N5 thematic Kanji lessons (36 characters).
+- [x] Create a dedicated Kanji Hub page at /kanji showing lesson completion progress.
+- [x] Enhance lesson detail page to render rich KANJI cards with Onyomi/Kunyomi, meanings, notes, and TTS support.
+- [x] Add Kanji progress card to the Dashboard and filter logic.
+- [x] Add Kanji CSS styles to globals.css.
+
+### Epic 12 - Flashcards & SRS module
+
+- [x] Add Flashcard model to the database schema.
+- [x] Automate flashcard record generation upon lesson completion.
+- [x] Create due count endpoint and review submission API with SM-2 spaced repetition logic.
+- [x] Render a dynamic flashcard review notification card on the Dashboard.
+- [x] Create a flippable review session page with Again/Good/Easy buttons, TTS support, and session statistics.
+- [x] Append CSS styles for flashcard layout and 3D flip animations to globals.css.
 
 ## Next Recommended Actions
 
-1. Apply and verify the Epic 05 content foundation migration locally.
-2. Add learner-facing published content endpoints for Epic 06.
+1. Start Docker Desktop and run seed: `pnpm --filter @chamnhatban/api exec ts-node-dev --transpile-only src/seed.ts`
+2. Begin Epic 13 (Quizzes and Assessments) implementation.

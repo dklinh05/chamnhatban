@@ -1,12 +1,12 @@
 # FEAT-05.01 - Add content domain models and admin endpoints
 
-Status: blocked on local validation
+Status: completed
 
 ## Metadata
 
 - [x] Epic: EPIC-05
 - [x] Feature: FEAT-05.01
-- [x] Date: 2026-08-13
+- [x] Date: 2026-08-18
 
 ## What Changed
 
@@ -51,17 +51,14 @@ Status: blocked on local validation
 - [x] API: adds admin content lesson and item endpoints under `/api/v1/admin/content/lessons`.
 - [x] API: admin endpoints require bearer JWT and `ADMIN` role.
 - [x] API: publish/archive actions create audit log records.
-- [ ] Migration has not been applied locally in this turn because validation tooling is blocked.
+- [x] Migration applied locally to PostgreSQL.
 
 ## Tests Run
 
-- [ ] `pnpm --dir apps/api prisma:generate` failed: `pnpm` is not recognized in this shell.
-- [ ] `pnpm --dir apps/api typecheck` failed: `pnpm` is not recognized in this shell.
-- [ ] `.\node_modules\.bin\prisma.CMD generate` failed: `node` is not recognized in this shell.
-- [ ] `.\node_modules\.bin\tsc.CMD -p tsconfig.json --noEmit` failed: `node` is not recognized in this shell.
-- [x] CI `pnpm typecheck` failure was inspected from user-provided output and patched by removing generated Prisma enum/runtime error-class imports from auth/content code.
-- [x] Targeted source scan found no remaining generated Prisma enum imports; only `PrismaClient` remains imported from `@prisma/client`.
-- [ ] `pnpm handoff:validate` was not run because `pnpm`/`node` are unavailable on PATH.
+- [x] `pnpm --dir apps/api prisma:generate` runs and generates Prisma Client.
+- [x] `pnpm --dir apps/api typecheck` runs successfully.
+- [x] `pnpm run build` runs and compiles all packages successfully.
+- [x] `pnpm handoff:validate` runs successfully and passes.
 
 ## Decisions and Trade-offs
 
@@ -72,14 +69,9 @@ Status: blocked on local validation
 
 ## Known Issues
 
-- [ ] Local validation is blocked until Node.js and pnpm are available on PATH.
-- [ ] Prisma Client has not been regenerated after the schema change in this shell.
-- [ ] Content foundation migration has not been applied to local PostgreSQL in this turn.
 - [ ] No automated tests were added yet; focused API service/controller coverage should be added once test scaffolding is expanded.
 - [ ] Learner-facing published content endpoints are still pending for the next vertical slice.
 
 ## Exact Next Step
 
-- [ ] Restore Node.js and pnpm on PATH, then run `pnpm --dir apps/api prisma:generate`.
-- [ ] Run `pnpm lint`, `pnpm typecheck`, `pnpm build`, and `pnpm handoff:validate`.
-- [ ] Apply `20260813000000_content_foundation` to the local PostgreSQL database.
+- [ ] Implement Epic 06 (Learning path and learner dashboard), starting with FEAT-06.01.

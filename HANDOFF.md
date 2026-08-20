@@ -2,13 +2,13 @@
 
 ## Current Status
 
-- Stage: Content domain and CMS foundation implemented, awaiting local validation.
-- Current epic: EPIC-05.
-- Latest completed feature: FEAT-04.03.
-- Active feature: FEAT-05.01.
+- Stage: Hiragana, Katakana, Vocabulary, Grammar, Kanji, and Flashcards/SRS foundations completed. Quizzes and Assessments planned next.
+- Current epic: EPIC-13.
+- Latest completed feature: FEAT-12.01.
+- Active feature: FEAT-13.01.
 - Production deployment: Not configured.
-- Database migrations: Applied auth foundation migration to local database. Content foundation migration created but not yet applied in this turn.
-- Open blockers: Node.js and pnpm are not available on PATH in the current shell, blocking Prisma generation and validation commands.
+- Database migrations: Applied migrations to local database.
+- Open blockers: Docker Desktop must be started to run database seed.
 
 ## Decisions Locked
 
@@ -27,7 +27,7 @@
 
 ## Next Recommended Action
 
-Restore Node.js and pnpm on PATH, then validate FEAT-05.01 with Prisma generation, lint, typecheck, build, and handoff validation.
+Implement EPIC-13 Quizzes and Assessments module foundation.
 
 ## Progress Checklist
 
@@ -53,7 +53,14 @@ Restore Node.js and pnpm on PATH, then validate FEAT-05.01 with Prisma generatio
 - [x] Registration and login endpoints added.
 - [x] Session management, refresh token rotation, and profile endpoints added.
 - [x] Content domain schema and admin content endpoints implemented.
-- [ ] FEAT-05.01 validation completed after Node.js/pnpm PATH is restored.
+- [x] FEAT-05.01 validation completed after Node.js/pnpm PATH is restored.
+- [x] FEAT-06.01 validation completed for learning path and dashboard.
+- [x] FEAT-07.01 validation completed for Hiragana foundation module.
+- [x] FEAT-08.01 validation completed for Katakana foundation module.
+- [x] FEAT-09.01 validation completed for Vocabulary foundation module.
+- [x] FEAT-10.01 validation completed for Grammar foundation module.
+- [x] FEAT-11.01 validation completed for Kanji foundation module.
+- [x] FEAT-12.01 validation completed for Flashcards and SRS foundation module.
 
 See [TODO.md](TODO.md) for the detailed action list and tick-box tracker.
 
@@ -74,3 +81,10 @@ See [TODO.md](TODO.md) for the detailed action list and tick-box tracker.
 - FEAT-04.02 - Add registration and login endpoints: [docs/handoffs/EPIC-04/FEAT-04.02-registration-and-login-endpoints.md](docs/handoffs/EPIC-04/FEAT-04.02-registration-and-login-endpoints.md)
 - FEAT-04.03 - Session management and profile basics: [docs/handoffs/EPIC-04/FEAT-04.03-session-management-and-profile-basics.md](docs/handoffs/EPIC-04/FEAT-04.03-session-management-and-profile-basics.md)
 - FEAT-05.01 - Content domain models and admin endpoints: [docs/handoffs/EPIC-05/FEAT-05.01-content-domain-models-and-admin-endpoints.md](docs/handoffs/EPIC-05/FEAT-05.01-content-domain-models-and-admin-endpoints.md)
+- FEAT-06.01 - Learning path and learner dashboard: [docs/handoffs/EPIC-06/FEAT-06.01-learning-path-and-dashboard.md](docs/handoffs/EPIC-06/FEAT-06.01-learning-path-and-dashboard.md)
+- FEAT-07.01 - Hiragana module foundation: [docs/handoffs/EPIC-07/FEAT-07.01-hiragana-foundation.md](docs/handoffs/EPIC-07/FEAT-07.01-hiragana-foundation.md)
+- FEAT-08.01 - Katakana module foundation: [docs/handoffs/EPIC-08/FEAT-08.01-katakana-foundation.md](docs/handoffs/EPIC-08/FEAT-08.01-katakana-foundation.md)
+- FEAT-09.01 - Vocabulary module foundation: [docs/handoffs/EPIC-09/FEAT-09.01-vocabulary-foundation.md](docs/handoffs/EPIC-09/FEAT-09.01-vocabulary-foundation.md)
+- FEAT-10.01 - Grammar module foundation: [docs/handoffs/EPIC-10/FEAT-10.01-grammar-foundation.md](docs/handoffs/EPIC-10/FEAT-10.01-grammar-foundation.md)
+- FEAT-11.01 - Kanji module foundation: [docs/handoffs/EPIC-11/FEAT-11.01-kanji-foundation.md](docs/handoffs/EPIC-11/FEAT-11.01-kanji-foundation.md)
+- FEAT-12.01 - Flashcards and SRS review module: [docs/handoffs/EPIC-12/FEAT-12.01-flashcards-and-srs.md](docs/handoffs/EPIC-12/FEAT-12.01-flashcards-and-srs.md)

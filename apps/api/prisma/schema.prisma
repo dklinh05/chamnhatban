@@ -49,6 +49,12 @@ model User {
   sessions            AuthSession[]
   passwordResetTokens PasswordResetToken[]
   contentAuditLogs    ContentAuditLog[]
+  lessonProgresses    LessonProgress[]
+  dailyActivities     DailyActivity[]
+  flashcards          Flashcard[]
+  currentStreak       Int                  @default(0)
+  longestStreak       Int                  @default(0)
+  lastActiveDate      String?
 }
 
 model AuthSession {
@@ -97,6 +103,7 @@ model ContentLesson {
   updatedAt   DateTime      @updatedAt
   items       ContentItem[]
   auditLogs   ContentAuditLog[]
+  progresses  LessonProgress[]
 
   @@index([status])
   @@index([order])
@@ -120,6 +127,7 @@ model ContentItem {
   createdAt DateTime        @default(now())
   updatedAt DateTime        @updatedAt
   lesson    ContentLesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  flashcards          Flashcard[]
 
   @@unique([lessonId, slug])
   @@unique([lessonId, order])
@@ -139,3 +147,47 @@ model ContentAuditLog {
   @@index([lessonId])
   @@index([actorId])
 }
+
+model LessonProgress {
+  id          String        @id @default(cuid())
+  userId      String
+  lessonId    String
+  completedAt DateTime      @default(now())
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson      ContentLesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+  @@index([userId])
+  @@index([lessonId])
+}
+
+model DailyActivity {
+  id        String   @id @default(cuid())
+  userId    String
+  date      String   // Unique activity date formatted as "YYYY-MM-DD" in user's timezone
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
+  @@index([userId])
+}
+
+model Flashcard {
+  id             String      @id @default(cuid())
+  userId         String
+  itemId         String
+  interval       Int         @default(1) // interval in days
+  easeFactor     Float       @default(2.5)
+  repetitions    Int         @default(0)
+  nextReviewAt   DateTime    @default(now())
+  lastReviewedAt DateTime?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  item           ContentItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, itemId])
+  @@index([userId])
+  @@index([nextReviewAt])
+}
+

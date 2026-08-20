@@ -61,6 +61,45 @@ export class ContentService {
     });
   }
 
+  async listPublishedLessons() {
+    return this.prisma.contentLesson.findMany({
+      where: { status: 'PUBLISHED' },
+      orderBy: [{ order: 'asc' }, { createdAt: 'asc' }],
+      select: {
+        id: true,
+        slug: true,
+        titleVi: true,
+        titleEn: true,
+        titleJa: true,
+        descriptionVi: true,
+        descriptionEn: true,
+        descriptionJa: true,
+        order: true,
+        publishedAt: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+  }
+
+  async getPublishedLessonBySlug(slug: string) {
+    const lesson = await this.prisma.contentLesson.findFirst({
+      where: { slug, status: 'PUBLISHED' },
+      include: {
+        items: {
+          where: { status: 'PUBLISHED' },
+          orderBy: { order: 'asc' },
+        },
+      },
+    });
+
+    if (!lesson) {
+      throw new NotFoundException('Content lesson was not found or is not published.');
+    }
+
+    return lesson;
+  }
+
   async getLesson(id: string) {
     const lesson = await this.prisma.contentLesson.findUnique({
       where: { id },
@@ -162,7 +201,7 @@ export class ContentService {
     const lesson = await this.getLesson(id);
     this.validatePublishableLesson(lesson);
 
-    return this.prisma.$transaction(async (tx: PrismaService) => {
+    return this.prisma.$transaction(async (tx) => {
       const published = await tx.contentLesson.update({
         where: { id },
         data: {
@@ -194,7 +233,7 @@ export class ContentService {
   async archiveLesson(id: string, actorId: string) {
     await this.getLesson(id);
 
-    return this.prisma.$transaction(async (tx: PrismaService) => {
+    return this.prisma.$transaction(async (tx) => {
       const archived = await tx.contentLesson.update({
         where: { id },
         data: {

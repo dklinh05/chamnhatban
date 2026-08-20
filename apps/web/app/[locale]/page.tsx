@@ -1,30 +1,60 @@
-import { getMessages, isLocale, locales, type Locale } from '@chamnhatban/i18n';
-import { Heading } from '@chamnhatban/ui';
-import { notFound } from 'next/navigation';
+'use client';
 
-type LocalePageProps = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
+import React, { useEffect } from 'react';
+import { useAuth } from '../auth-context';
+import { useParams, useRouter } from 'next/navigation';
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+export default function LocaleHomePage() {
+  const { user, isLoading } = useAuth();
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
 
-export default async function LocaleHomePage({ params }: LocalePageProps) {
-  const { locale } = await params;
+  useEffect(() => {
+    if (!isLoading && user) {
+      router.push(`/${locale}/dashboard`);
+    }
+  }, [user, isLoading, locale, router]);
 
-  if (!isLocale(locale)) {
-    notFound();
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p>Đang tải...</p>
+      </div>
+    );
   }
 
-  const messages = getMessages(locale as Locale);
-
   return (
-    <main>
-      <Heading>{messages['home.title']}</Heading>
-      <p>{messages['home.intro']}</p>
-    </main>
+    <div className="auth-container">
+      <div className="auth-card" style={{ maxWidth: '480px', textAlign: 'center' }}>
+        <h2>Chạm Nhật Bản</h2>
+        <p className="subtitle" style={{ marginBottom: '24px' }}>
+          Học tiếng Nhật N5 theo lộ trình trực quan và theo dõi streak của bạn hàng ngày.
+        </p>
+
+        <div className="auth-form" style={{ marginTop: '20px' }}>
+          <button
+            onClick={() => router.push(`/${locale}/login`)}
+            className="btn-primary"
+            style={{ width: '100%' }}
+          >
+            Đăng nhập
+          </button>
+
+          <button
+            onClick={() => router.push(`/${locale}/register`)}
+            className="btn-secondary"
+            style={{ width: '100%', padding: '14px', fontSize: '16px', fontWeight: '600' }}
+          >
+            Tạo tài khoản mới
+          </button>
+        </div>
+
+        <p className="auth-footer" style={{ marginTop: '30px', fontSize: '12px' }}>
+          Bắt đầu hành trình chinh phục N5 của bạn ngay hôm nay!
+        </p>
+      </div>
+    </div>
   );
 }
