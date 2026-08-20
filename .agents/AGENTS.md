@@ -69,7 +69,7 @@ During coding:
 Before completion:
 
 1. Verify every acceptance criterion.
-2. Run relevant lint, typecheck, tests, build, and migration validation.
+2. Run code formatting (pnpm format), lint, typecheck, tests, build, and migration validation.
 3. Update affected docs.
 4. Create a feature handoff under
    `docs/handoffs/<EPIC-ID>/<FEATURE-ID>-<slug>.md`.
@@ -82,6 +82,7 @@ A feature is not complete until the handoff exists.
 ## Definition Of Done
 
 - Acceptance criteria are satisfied.
+- Code is formatted cleanly (Prettier check passes via `pnpm format:check`).
 - Validation and error paths are handled.
 - Authorization is enforced server-side.
 - Tests cover the primary path and important failure paths.
