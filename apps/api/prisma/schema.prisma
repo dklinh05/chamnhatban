@@ -52,6 +52,7 @@ model User {
   lessonProgresses    LessonProgress[]
   dailyActivities     DailyActivity[]
   flashcards          Flashcard[]
+  quizAttempts        QuizAttempt[]
   currentStreak       Int                  @default(0)
   longestStreak       Int                  @default(0)
   lastActiveDate      String?
@@ -104,6 +105,7 @@ model ContentLesson {
   items       ContentItem[]
   auditLogs   ContentAuditLog[]
   progresses  LessonProgress[]
+  quiz        Quiz?
 
   @@index([status])
   @@index([order])
@@ -190,4 +192,50 @@ model Flashcard {
   @@index([userId])
   @@index([nextReviewAt])
 }
+
+model Quiz {
+  id        String         @id @default(cuid())
+  lessonId  String         @unique
+  titleVi   String
+  titleEn   String
+  titleJa   String
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  lesson    ContentLesson  @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  questions QuizQuestion[]
+  attempts  QuizAttempt[]
+}
+
+model QuizQuestion {
+  id                 String   @id @default(cuid())
+  quizId             String
+  questionText       String
+  questionType       String   @default("MCQ")
+  options            String[]
+  correctOptionIndex Int
+  explanationVi      String?
+  explanationEn      String?
+  order              Int
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  quiz               Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  @@index([quizId])
+  @@index([order])
+}
+
+model QuizAttempt {
+  id          String   @id @default(cuid())
+  userId      String
+  quizId      String
+  score       Float
+  answers     Json
+  completedAt DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quiz        Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([quizId])
+}
+
 

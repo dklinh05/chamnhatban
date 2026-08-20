@@ -58,11 +58,12 @@ const requiredFiles = [
   'apps/api/prisma/migrations/20260807000000_auth_foundation/migration.sql',
   'apps/api/prisma/migrations/20260813000000_content_foundation/migration.sql',
   'apps/api/prisma/migrations/20260818141015_progress_foundation/migration.sql',
-  'apps/api/prisma/migrations/20260820120000_flashcards_srs/migration.sql'
+  'apps/api/prisma/migrations/20260820120000_flashcards_srs/migration.sql',
+  'apps/api/prisma/migrations/20260820150000_quiz_foundation/migration.sql'
 ];
 
 const requiredRootMarkers = [
-  'Latest completed feature: FEAT-12.01',
+  'Latest completed feature: FEAT-13.01',
   '- Open blockers: Docker Desktop must be started to run database seed.'
 ];
 

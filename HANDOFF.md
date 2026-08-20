@@ -2,10 +2,10 @@
 
 ## Current Status
 
-- Stage: Hiragana, Katakana, Vocabulary, Grammar, Kanji, and Flashcards/SRS foundations completed. Quizzes and Assessments planned next.
-- Current epic: EPIC-13.
-- Latest completed feature: FEAT-12.01.
-- Active feature: FEAT-13.01.
+- Stage: Hiragana, Katakana, Vocabulary, Grammar, Kanji, Flashcards/SRS, and Quiz engine foundations completed. Streaks and progress audits planned next.
+- Current epic: EPIC-14.
+- Latest completed feature: FEAT-13.01.
+- Active feature: None.
 - Production deployment: Not configured.
 - Database migrations: Applied migrations to local database.
 - Open blockers: Docker Desktop must be started to run database seed.
@@ -27,7 +27,7 @@
 
 ## Next Recommended Action
 
-Implement EPIC-13 Quizzes and Assessments module foundation.
+Implement EPIC-14 Progress tracking, daily activity streaks, and progress auditing.
 
 ## Progress Checklist
 
@@ -61,6 +61,7 @@ Implement EPIC-13 Quizzes and Assessments module foundation.
 - [x] FEAT-10.01 validation completed for Grammar foundation module.
 - [x] FEAT-11.01 validation completed for Kanji foundation module.
 - [x] FEAT-12.01 validation completed for Flashcards and SRS foundation module.
+- [x] FEAT-13.01 validation completed for Quiz engine and assessments.
 
 See [TODO.md](TODO.md) for the detailed action list and tick-box tracker.
 
@@ -88,3 +89,4 @@ See [TODO.md](TODO.md) for the detailed action list and tick-box tracker.
 - FEAT-10.01 - Grammar module foundation: [docs/handoffs/EPIC-10/FEAT-10.01-grammar-foundation.md](docs/handoffs/EPIC-10/FEAT-10.01-grammar-foundation.md)
 - FEAT-11.01 - Kanji module foundation: [docs/handoffs/EPIC-11/FEAT-11.01-kanji-foundation.md](docs/handoffs/EPIC-11/FEAT-11.01-kanji-foundation.md)
 - FEAT-12.01 - Flashcards and SRS review module: [docs/handoffs/EPIC-12/FEAT-12.01-flashcards-and-srs.md](docs/handoffs/EPIC-12/FEAT-12.01-flashcards-and-srs.md)
+- FEAT-13.01 - Quiz engine and assessments foundation: [docs/handoffs/EPIC-13/FEAT-13.01-quiz-foundation.md](docs/handoffs/EPIC-13/FEAT-13.01-quiz-foundation.md)

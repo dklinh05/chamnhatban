@@ -57,6 +57,7 @@ export default function LessonDetailPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isCompleting, setIsCompleting] = useState(false);
+  const [quiz, setQuiz] = useState<any | null>(null);
 
   useEffect(() => {
     if (!isAuthLoading && !user) {
@@ -83,6 +84,13 @@ export default function LessonDetailPage() {
             const progressData = await progressRes.json();
             setLesson(lessonData);
             setIsCompleted(progressData.completedLessonIds.includes(lessonData.id));
+
+            // Fetch quiz associated with this lesson
+            const quizRes = await apiFetch(`/quizzes/lessons/${lessonData.id}`).catch(() => null);
+            if (quizRes && quizRes.ok) {
+              const quizData = await quizRes.json();
+              setQuiz(quizData);
+            }
           } else {
             setError('Có lỗi xảy ra khi tải dữ liệu bài học.');
           }
@@ -346,23 +354,32 @@ export default function LessonDetailPage() {
           className="lesson-actions"
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}
         >
-          <button
-            onClick={handleComplete}
-            disabled={isCompleting}
-            className={`btn-complete ${isCompleted ? 'already-completed' : ''}`}
-          >
-            {isCompleting
-              ? 'Đang lưu tiến độ...'
-              : isCompleted
-              ? 'Đã hoàn thành (Học lại)'
-              : isVocabLesson
-              ? 'Hoàn thành chủ đề'
-              : isGrammarLesson
-              ? 'Hoàn thành bài ngữ pháp'
-              : isKanjiLesson
-              ? 'Hoàn thành bài chữ Hán'
-              : 'Hoàn thành bài học'}
-          </button>
+          {quiz ? (
+            <button
+              onClick={() => router.push(`/${locale}/lessons/${slug}/quiz`)}
+              className="btn-complete"
+            >
+              {isCompleted ? 'Luyện tập (Làm lại kiểm tra)' : 'Làm bài kiểm tra'}
+            </button>
+          ) : (
+            <button
+              onClick={handleComplete}
+              disabled={isCompleting}
+              className={`btn-complete ${isCompleted ? 'already-completed' : ''}`}
+            >
+              {isCompleting
+                ? 'Đang lưu tiến độ...'
+                : isCompleted
+                ? 'Đã hoàn thành (Học lại)'
+                : isVocabLesson
+                ? 'Hoàn thành chủ đề'
+                : isGrammarLesson
+                ? 'Hoàn thành bài ngữ pháp'
+                : isKanjiLesson
+                ? 'Hoàn thành bài chữ Hán'
+                : 'Hoàn thành bài học'}
+            </button>
+          )}
           {isVocabLesson && (
             <button
               onClick={() => router.push(`/${locale}/vocabulary`)}

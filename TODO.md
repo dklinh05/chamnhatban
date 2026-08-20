@@ -211,7 +211,18 @@ Use this file as the main checklist for future implementation. Tick items when c
 - [x] Create a flippable review session page with Again/Good/Easy buttons, TTS support, and session statistics.
 - [x] Append CSS styles for flashcard layout and 3D flip animations to globals.css.
 
+### Epic 13 - Quizzes & Assessments module
+
+- [x] Add Quiz, QuizQuestion, and QuizAttempt models to the database schema.
+- [x] Automate quiz seeding for Row A Hiragana, Greetings Vocabulary, and Numbers Kanji lessons.
+- [x] Create secure GET quiz endpoint (hiding correct options) and POST submit attempt evaluation API.
+- [x] Update lesson detail page to display "Làm bài kiểm tra" button if a quiz is present.
+- [x] Create step-by-step MCQ quiz execution interface with progress bar, active selection card, and detailed review.
+- [x] Append CSS styles for quiz layout, choice buttons, status badges, and review cards.
+
 ## Next Recommended Actions
 
-1. Start Docker Desktop and run seed: `pnpm --filter @chamnhatban/api exec ts-node-dev --transpile-only src/seed.ts`
-2. Begin Epic 13 (Quizzes and Assessments) implementation.
+1. Start Docker Desktop/PostgreSQL container and run prisma migrate and seed:
+   `pnpm --filter @chamnhatban/api exec prisma migrate dev`
+   `pnpm --filter @chamnhatban/api exec ts-node-dev --transpile-only src/seed.ts`
+2. Begin Epic 14 (Progress & Streaks) implementation.

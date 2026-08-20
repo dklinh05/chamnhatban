@@ -2719,6 +2719,124 @@ async function main() {
     console.log('Seeded kanji lesson:', created.slug);
   }
 
+  // 7. Seed Quizzes
+  console.log('Seeding quizzes...');
+  const lessonQuizzes = [
+    {
+      lessonSlug: 'hiragana-row-a',
+      titleVi: 'Bài kiểm tra hàng chữ あ (a, i, u, e, o)',
+      titleEn: 'Quiz: Row A (a, i, u, e, o)',
+      titleJa: 'あ行クイズ',
+      questions: [
+        {
+          questionText: 'Chữ Hiragana nào phát âm là "a"?',
+          options: ['あ', 'い', 'う', 'え'],
+          correctOptionIndex: 0,
+          explanationVi: 'あ phát âm là "a". い là "i", う là "u", え là "e".',
+          explanationEn: 'あ is pronounced "a". い is "i", う is "u", え is "e".',
+          order: 1,
+        },
+        {
+          questionText: 'Chữ "い" phát âm là gì?',
+          options: ['a', 'i', 'u', 'e'],
+          correctOptionIndex: 1,
+          explanationVi: 'Chữ い phát âm là "i".',
+          explanationEn: 'The character い is pronounced "i".',
+          order: 2,
+        },
+        {
+          questionText: 'Chữ Hiragana nào phát âm là "o"?',
+          options: ['あ', 'お', 'う', 'え'],
+          correctOptionIndex: 1,
+          explanationVi: 'お phát âm là "o". あ là "a".',
+          explanationEn: 'お is pronounced "o". あ is "a".',
+          order: 3,
+        },
+      ],
+    },
+    {
+      lessonSlug: 'vocab-greetings',
+      titleVi: 'Bài kiểm tra từ vựng: Chào hỏi',
+      titleEn: 'Vocabulary Quiz: Greetings',
+      titleJa: '挨拶語彙クイズ',
+      questions: [
+        {
+          questionText: 'Chào buổi sáng lịch sự tiếng Nhật là gì?',
+          options: ['こんにちは', 'おはようございます', 'こんばんは', 'さようなら'],
+          correctOptionIndex: 1,
+          explanationVi: 'おはようございます là chào buổi sáng lịch sự.',
+          explanationEn: 'おはようございます is polite "Good morning".',
+          order: 1,
+        },
+        {
+          questionText: 'Từ nào nghĩa là "Cảm ơn"?',
+          options: ['ありがとう', 'すみません', 'はい', 'いいえ'],
+          correctOptionIndex: 0,
+          explanationVi: 'ありがとう nghĩa là cảm ơn.',
+          explanationEn: 'ありがとう means "Thank you".',
+          order: 2,
+        },
+      ],
+    },
+    {
+      lessonSlug: 'kanji-numbers',
+      titleVi: 'Bài kiểm tra chữ Hán: Số đếm (1-10)',
+      titleEn: 'Kanji Quiz: Numbers (1-10)',
+      titleJa: '漢字クイズ：数字 (1-10)',
+      questions: [
+        {
+          questionText: 'Chữ Hán "一" là số mấy?',
+          options: ['Số 1', 'Số 2', 'Số 3', 'Số 10'],
+          correctOptionIndex: 0,
+          explanationVi: '一 là số 1.',
+          explanationEn: '一 is number 1.',
+          order: 1,
+        },
+        {
+          questionText: 'Chữ Hán nào là số 3?',
+          options: ['二', '三', '四', '五'],
+          correctOptionIndex: 1,
+          explanationVi: '三 là số 3.',
+          explanationEn: '三 is number 3.',
+          order: 2,
+        },
+      ],
+    },
+  ];
+
+  for (const qz of lessonQuizzes) {
+    const lesson = await prisma.contentLesson.findUnique({
+      where: { slug: qz.lessonSlug },
+    });
+    if (lesson) {
+      // Clean old quiz and attempts
+      const oldQuiz = await prisma.quiz.findUnique({ where: { lessonId: lesson.id } });
+      if (oldQuiz) {
+        await prisma.quiz.delete({ where: { id: oldQuiz.id } });
+      }
+
+      await prisma.quiz.create({
+        data: {
+          lessonId: lesson.id,
+          titleVi: qz.titleVi,
+          titleEn: qz.titleEn,
+          titleJa: qz.titleJa,
+          questions: {
+            create: qz.questions.map((q) => ({
+              questionText: q.questionText,
+              options: q.options,
+              correctOptionIndex: q.correctOptionIndex,
+              explanationVi: q.explanationVi,
+              explanationEn: q.explanationEn,
+              order: q.order,
+            })),
+          },
+        },
+      });
+      console.log('Seeded quiz for lesson:', qz.lessonSlug);
+    }
+  }
+
   console.log('Database seeding complete!');
 }
 
