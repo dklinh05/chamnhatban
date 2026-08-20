@@ -40,7 +40,7 @@ export class FlashcardsController {
   reviewCard(
     @Param('id') cardId: string,
     @Body() body: ReviewCardDto,
-    @Req() req: AuthenticatedRequest,
+    @Req() req: AuthenticatedRequest
   ) {
     return this.flashcardsService.reviewCard(req.user.id, cardId, body.score);
   }

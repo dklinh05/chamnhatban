@@ -106,8 +106,11 @@ export default function VocabularyPage() {
         <div className="hiragana-header">
           <h2>Học Từ vựng tiếng Nhật N5</h2>
           <p className="section-desc">
-            Bộ từ vựng N5 được phân theo chủ đề. Nhấn vào từng bộ để bắt đầu học.
-            Tiến độ: <strong>{completedCount} / {lessons.length}</strong> chủ đề đã hoàn thành.
+            Bộ từ vựng N5 được phân theo chủ đề. Nhấn vào từng bộ để bắt đầu học. Tiến độ:{' '}
+            <strong>
+              {completedCount} / {lessons.length}
+            </strong>{' '}
+            chủ đề đã hoàn thành.
           </p>
         </div>
 

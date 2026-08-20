@@ -159,7 +159,8 @@ export default function DashboardPage() {
             <div
               className="stat-card streak-card"
               style={{
-                background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(168, 85, 247, 0.04) 100%)',
+                background:
+                  'linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(168, 85, 247, 0.04) 100%)',
                 border: '1px solid rgba(168, 85, 247, 0.25)',
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -167,7 +168,7 @@ export default function DashboardPage() {
                 flexDirection: 'row',
                 width: '100%',
                 cursor: 'pointer',
-                gap: '16px'
+                gap: '16px',
               }}
               onClick={() => router.push(`/${locale}/flashcards/review`)}
               id="flashcards-due-card"
@@ -175,11 +176,19 @@ export default function DashboardPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <div style={{ fontSize: '32px' }}>💮</div>
                 <div>
-                  <h3 style={{ margin: 0, fontSize: '17px', fontWeight: '700', color: 'var(--color-text)' }}>
+                  <h3
+                    style={{
+                      margin: 0,
+                      fontSize: '17px',
+                      fontWeight: '700',
+                      color: 'var(--color-text)',
+                    }}
+                  >
                     Ôn tập hàng ngày (SRS)
                   </h3>
                   <p style={{ margin: '4px 0 0', fontSize: '13px', color: 'var(--color-muted)' }}>
-                    Bạn có <strong style={{ color: '#a855f7' }}>{dueCount}</strong> thẻ cần ôn tập hôm nay để duy trì trí nhớ.
+                    Bạn có <strong style={{ color: '#a855f7' }}>{dueCount}</strong> thẻ cần ôn tập
+                    hôm nay để duy trì trí nhớ.
                   </p>
                 </div>
               </div>
@@ -190,7 +199,7 @@ export default function DashboardPage() {
                   border: 'none',
                   whiteSpace: 'nowrap',
                   padding: '8px 16px',
-                  fontSize: '13px'
+                  fontSize: '13px',
                 }}
               >
                 Ôn tập ngay →
@@ -280,9 +289,7 @@ export default function DashboardPage() {
         {/* Vocabulary N5 Section */}
         <section className="learning-path-section">
           <h2>Từ vựng N5</h2>
-          <p className="section-desc">
-            Học bộ từ vựng N5 được phân theo 10 chủ đề thực tế.
-          </p>
+          <p className="section-desc">Học bộ từ vựng N5 được phân theo 10 chủ đề thực tế.</p>
           <div
             id="vocab-hub-link"
             className={`lesson-path-card ${completedVocabCount === 10 ? 'completed' : 'pending'}`}
@@ -292,7 +299,10 @@ export default function DashboardPage() {
             <div className="lesson-number">📖</div>
             <div className="lesson-details">
               <h3>Từ vựng N5 — 10 Chủ đề</h3>
-              <p>Chào hỏi, Số đếm, Thời gian, Gia đình, Cơ thể, Đồ ăn, Giao thông, Trường học, Màu sắc, Tính từ.</p>
+              <p>
+                Chào hỏi, Số đếm, Thời gian, Gia đình, Cơ thể, Đồ ăn, Giao thông, Trường học, Màu
+                sắc, Tính từ.
+              </p>
               <div
                 style={{
                   marginTop: '8px',
@@ -322,9 +332,7 @@ export default function DashboardPage() {
         {/* Kanji N5 Section */}
         <section className="learning-path-section">
           <h2>Chữ Hán N5</h2>
-          <p className="section-desc">
-            Học 36 chữ Hán N5 cơ bản được phân theo 5 chủ đề.
-          </p>
+          <p className="section-desc">Học 36 chữ Hán N5 cơ bản được phân theo 5 chủ đề.</p>
           <div
             id="kanji-hub-link"
             className={`lesson-path-card ${completedKanjiCount === 5 ? 'completed' : 'pending'}`}
@@ -350,10 +358,7 @@ export default function DashboardPage() {
               {completedKanjiCount === kanjiLessons.length && kanjiLessons.length > 0 ? (
                 <span className="status-badge completed-badge">✓ Hoàn thành</span>
               ) : (
-                <span
-                  className="status-badge pending-badge"
-                  style={{ borderColor: '#a855f7' }}
-                >
+                <span className="status-badge pending-badge" style={{ borderColor: '#a855f7' }}>
                   Học chữ Hán
                 </span>
               )}
@@ -365,16 +370,19 @@ export default function DashboardPage() {
         <section className="learning-path-section">
           <h2>Ngữ pháp N5</h2>
           <p className="section-desc">
-            Hoàn thành các bài học ngữ pháp dưới đây để xây dựng nền tảng câu tiếng Nhật N5.
-            Tiến độ: <strong>{completedGrammarCount} / {grammarLessons.length}</strong> bài học đã hoàn thành.
+            Hoàn thành các bài học ngữ pháp dưới đây để xây dựng nền tảng câu tiếng Nhật N5. Tiến
+            độ:{' '}
+            <strong>
+              {completedGrammarCount} / {grammarLessons.length}
+            </strong>{' '}
+            bài học đã hoàn thành.
           </p>
 
           {grammarLessons.length === 0 ? (
             <div className="empty-state">
               <div className="empty-icon">📚</div>
               <p>
-                Hiện chưa có bài học ngữ pháp nào được xuất bản. Admin sẽ sớm cập nhật bài
-                học mới!
+                Hiện chưa có bài học ngữ pháp nào được xuất bản. Admin sẽ sớm cập nhật bài học mới!
               </p>
             </div>
           ) : (

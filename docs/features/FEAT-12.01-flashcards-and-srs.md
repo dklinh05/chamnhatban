@@ -3,6 +3,7 @@
 ## Scope
 
 Implement spaced-repetition flashcards and review scheduling for N5 learners.
+
 1. Add `Flashcard` table in `schema.prisma` and a migration.
 2. Automate flashcard generation: when a learner completes a lesson (Vocabulary, Kanji, or Kana), automatically create `Flashcard` records for all published items in that lesson.
 3. Build the Flashcard Review API:

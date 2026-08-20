@@ -172,7 +172,7 @@ Use this file as the main checklist for future implementation. Tick items when c
 
 - [x] Seed database with Katakana lessons and KANA characters.
 - [x] Implement visual interactive Katakana Gojuon chart with detail modals and TTS audio.
-- [x] Ensure practice page supports katakana-* slugs and routes back to /katakana correctly.
+- [x] Ensure practice page supports katakana-\* slugs and routes back to /katakana correctly.
 - [x] Fix hardcoded Hiragana labels in practice page to be script-agnostic.
 - [x] Dashboard integration showing Katakana progress stats and link.
 - [x] Fix Katakana ContentItem slug collision (kt- prefix namespace).

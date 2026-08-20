@@ -169,18 +169,10 @@ export default function FlashcardsReviewPage() {
   const progressPercent = Math.min(100, Math.round((currentIndex / sessionCount) * 100));
 
   const meaning =
-    locale === 'vi'
-      ? item.meaningVi
-      : locale === 'ja'
-      ? item.meaningJa
-      : item.meaningEn;
+    locale === 'vi' ? item.meaningVi : locale === 'ja' ? item.meaningJa : item.meaningEn;
 
   const notes =
-    locale === 'vi'
-      ? item.notesVi
-      : locale === 'ja'
-      ? item.notesJa ?? item.notesEn
-      : item.notesEn;
+    locale === 'vi' ? item.notesVi : locale === 'ja' ? item.notesJa ?? item.notesEn : item.notesEn;
 
   return (
     <div className="dashboard-layout">
@@ -200,12 +192,36 @@ export default function FlashcardsReviewPage() {
       <main className="hiragana-container" style={{ maxWidth: '640px', margin: '0 auto' }}>
         {/* Progress bar */}
         <div style={{ marginBottom: '24px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: 'var(--color-muted)', marginBottom: '8px' }}>
-            <span>Tiến trình buổi ôn tập: {currentIndex} / {sessionCount} thẻ</span>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              fontSize: '13px',
+              color: 'var(--color-muted)',
+              marginBottom: '8px',
+            }}
+          >
+            <span>
+              Tiến trình buổi ôn tập: {currentIndex} / {sessionCount} thẻ
+            </span>
             <span>{progressPercent}%</span>
           </div>
-          <div style={{ height: '6px', background: 'var(--color-border)', borderRadius: '3px', overflow: 'hidden' }}>
-            <div style={{ width: `${progressPercent}%`, height: '100%', background: '#a855f7', transition: 'width 0.2s ease' }} />
+          <div
+            style={{
+              height: '6px',
+              background: 'var(--color-border)',
+              borderRadius: '3px',
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                width: `${progressPercent}%`,
+                height: '100%',
+                background: '#a855f7',
+                transition: 'width 0.2s ease',
+              }}
+            />
           </div>
         </div>
 
@@ -245,12 +261,10 @@ export default function FlashcardsReviewPage() {
 
               <div className="flashcard-back-content">
                 <div className="flashcard-back-main-char">{item.sourceJa}</div>
-                {item.reading && (
-                  <div className="flashcard-back-reading">{item.reading}</div>
-                )}
-                
+                {item.reading && <div className="flashcard-back-reading">{item.reading}</div>}
+
                 <div className="flashcard-divider" />
-                
+
                 <div className="flashcard-detail-section">
                   <div className="flashcard-detail-label">Ý nghĩa:</div>
                   <div className="flashcard-detail-value">{meaning}</div>

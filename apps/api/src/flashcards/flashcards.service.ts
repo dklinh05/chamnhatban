@@ -4,10 +4,7 @@ import { ProgressService } from '../progress/progress.service';
 
 @Injectable()
 export class FlashcardsService {
-  constructor(
-    private readonly prisma: PrismaService,
-    private readonly progress: ProgressService,
-  ) {}
+  constructor(private readonly prisma: PrismaService, private readonly progress: ProgressService) {}
 
   async getStats(userId: string) {
     const now = new Date();

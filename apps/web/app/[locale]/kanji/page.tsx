@@ -102,7 +102,11 @@ export default function KanjiPage() {
           <h2>Học Chữ Hán (Kanji) tiếng Nhật N5</h2>
           <p className="section-desc">
             Nhận diện mặt chữ, âm đọc Onyomi/Kunyomi và ý nghĩa của 36 chữ Hán cơ bản nhất trong N5.
-            Tiến độ: <strong>{completedCount} / {lessons.length}</strong> bài học đã hoàn thành.
+            Tiến độ:{' '}
+            <strong>
+              {completedCount} / {lessons.length}
+            </strong>{' '}
+            bài học đã hoàn thành.
           </p>
         </div>
 

@@ -1129,14 +1129,78 @@ async function main() {
       descriptionJa: '日常のあいさつと基本的なフレーズを学びます。',
       order: 21,
       items: [
-        { slug: 'vk-konnichiwa', sourceJa: 'こんにちは', reading: 'konnichiwa', vi: 'Xin chào (ban ngày)', en: 'Hello / Good afternoon', noteVi: 'こんにちは (konnichiwa) - Xin chào bạn!', noteEn: 'こんにちは (konnichiwa) - Hello!' },
-        { slug: 'vk-ohayou', sourceJa: 'おはようございます', reading: 'ohayou gozaimasu', vi: 'Chào buổi sáng (lịch sự)', en: 'Good morning (polite)', noteVi: 'おはようございます - Chào buổi sáng!', noteEn: 'おはようございます - Good morning!' },
-        { slug: 'vk-konbanwa', sourceJa: 'こんばんは', reading: 'konbanwa', vi: 'Chào buổi tối', en: 'Good evening', noteVi: 'こんばんは - Chào buổi tối!', noteEn: 'こんばんは - Good evening!' },
-        { slug: 'vk-arigatou', sourceJa: 'ありがとうございます', reading: 'arigatou gozaimasu', vi: 'Cảm ơn (lịch sự)', en: 'Thank you very much', noteVi: 'ありがとうございます - Cảm ơn bạn rất nhiều!', noteEn: 'ありがとうございます - Thank you very much!' },
-        { slug: 'vk-sumimasen', sourceJa: 'すみません', reading: 'sumimasen', vi: 'Xin lỗi / Excuse me', en: 'Excuse me / Sorry', noteVi: 'すみません - Xin lỗi, cho tôi hỏi một chút.', noteEn: 'すみません - Excuse me, may I ask something?' },
-        { slug: 'vk-hai', sourceJa: 'はい', reading: 'hai', vi: 'Vâng / Có', en: 'Yes', noteVi: 'はい、わかりました - Vâng, tôi hiểu rồi.', noteEn: 'はい、わかりました - Yes, I understand.' },
-        { slug: 'vk-iie', sourceJa: 'いいえ', reading: 'iie', vi: 'Không', en: 'No', noteVi: 'いいえ、ちがいます - Không, sai rồi.', noteEn: 'いいえ、ちがいます - No, that is wrong.' },
-        { slug: 'vk-sayounara', sourceJa: 'さようなら', reading: 'sayounara', vi: 'Tạm biệt', en: 'Goodbye', noteVi: 'さようなら - Tạm biệt nhé!', noteEn: 'さようなら - Goodbye!' },
+        {
+          slug: 'vk-konnichiwa',
+          sourceJa: 'こんにちは',
+          reading: 'konnichiwa',
+          vi: 'Xin chào (ban ngày)',
+          en: 'Hello / Good afternoon',
+          noteVi: 'こんにちは (konnichiwa) - Xin chào bạn!',
+          noteEn: 'こんにちは (konnichiwa) - Hello!',
+        },
+        {
+          slug: 'vk-ohayou',
+          sourceJa: 'おはようございます',
+          reading: 'ohayou gozaimasu',
+          vi: 'Chào buổi sáng (lịch sự)',
+          en: 'Good morning (polite)',
+          noteVi: 'おはようございます - Chào buổi sáng!',
+          noteEn: 'おはようございます - Good morning!',
+        },
+        {
+          slug: 'vk-konbanwa',
+          sourceJa: 'こんばんは',
+          reading: 'konbanwa',
+          vi: 'Chào buổi tối',
+          en: 'Good evening',
+          noteVi: 'こんばんは - Chào buổi tối!',
+          noteEn: 'こんばんは - Good evening!',
+        },
+        {
+          slug: 'vk-arigatou',
+          sourceJa: 'ありがとうございます',
+          reading: 'arigatou gozaimasu',
+          vi: 'Cảm ơn (lịch sự)',
+          en: 'Thank you very much',
+          noteVi: 'ありがとうございます - Cảm ơn bạn rất nhiều!',
+          noteEn: 'ありがとうございます - Thank you very much!',
+        },
+        {
+          slug: 'vk-sumimasen',
+          sourceJa: 'すみません',
+          reading: 'sumimasen',
+          vi: 'Xin lỗi / Excuse me',
+          en: 'Excuse me / Sorry',
+          noteVi: 'すみません - Xin lỗi, cho tôi hỏi một chút.',
+          noteEn: 'すみません - Excuse me, may I ask something?',
+        },
+        {
+          slug: 'vk-hai',
+          sourceJa: 'はい',
+          reading: 'hai',
+          vi: 'Vâng / Có',
+          en: 'Yes',
+          noteVi: 'はい、わかりました - Vâng, tôi hiểu rồi.',
+          noteEn: 'はい、わかりました - Yes, I understand.',
+        },
+        {
+          slug: 'vk-iie',
+          sourceJa: 'いいえ',
+          reading: 'iie',
+          vi: 'Không',
+          en: 'No',
+          noteVi: 'いいえ、ちがいます - Không, sai rồi.',
+          noteEn: 'いいえ、ちがいます - No, that is wrong.',
+        },
+        {
+          slug: 'vk-sayounara',
+          sourceJa: 'さようなら',
+          reading: 'sayounara',
+          vi: 'Tạm biệt',
+          en: 'Goodbye',
+          noteVi: 'さようなら - Tạm biệt nhé!',
+          noteEn: 'さようなら - Goodbye!',
+        },
       ],
     },
     {
@@ -1149,16 +1213,96 @@ async function main() {
       descriptionJa: '1から10000までの数字と実際の使い方を学びます。',
       order: 22,
       items: [
-        { slug: 'vk-ichi', sourceJa: '一 (いち)', reading: 'ichi', vi: 'Một (1)', en: 'One (1)', noteVi: 'いち - りんごがいっこあります - Có một quả táo.', noteEn: 'ichi - りんごがいっこあります - There is one apple.' },
-        { slug: 'vk-ni', sourceJa: '二 (に)', reading: 'ni', vi: 'Hai (2)', en: 'Two (2)', noteVi: 'に - ねこがにひきいます - Có hai con mèo.', noteEn: 'ni - ねこがにひきいます - There are two cats.' },
-        { slug: 'vk-san', sourceJa: '三 (さん)', reading: 'san', vi: 'Ba (3)', en: 'Three (3)', noteVi: 'さん - さんじかんべんきょうします - Học ba tiếng đồng hồ.', noteEn: 'san - さんじかんべんきょうします - I study for three hours.' },
-        { slug: 'vk-shi', sourceJa: '四 (し / よん)', reading: 'shi / yon', vi: 'Bốn (4)', en: 'Four (4)', noteVi: 'よん - よんほんのえんぴつ - Bốn cây bút chì.', noteEn: 'yon - よんほんのえんぴつ - Four pencils.' },
-        { slug: 'vk-go', sourceJa: '五 (ご)', reading: 'go', vi: 'Năm (5)', en: 'Five (5)', noteVi: 'ご - ごにんのともだち - Năm người bạn.', noteEn: 'go - ごにんのともだち - Five friends.' },
-        { slug: 'vk-roku', sourceJa: '六 (ろく)', reading: 'roku', vi: 'Sáu (6)', en: 'Six (6)', noteVi: 'ろく - ろくじにおきます - Thức dậy lúc 6 giờ.', noteEn: 'roku - ろくじにおきます - I wake up at 6 o\'clock.' },
-        { slug: 'vk-nana', sourceJa: '七 (なな / しち)', reading: 'nana / shichi', vi: 'Bảy (7)', en: 'Seven (7)', noteVi: 'なな - ななだいのくるま - Bảy chiếc xe.', noteEn: 'nana - ななだいのくるま - Seven cars.' },
-        { slug: 'vk-hachi', sourceJa: '八 (はち)', reading: 'hachi', vi: 'Tám (8)', en: 'Eight (8)', noteVi: 'はち - はちじかんねむります - Ngủ 8 tiếng.', noteEn: 'hachi - はちじかんねむります - I sleep for 8 hours.' },
-        { slug: 'vk-kyuu', sourceJa: '九 (きゅう / く)', reading: 'kyuu / ku', vi: 'Chín (9)', en: 'Nine (9)', noteVi: 'きゅう - きゅうじゅうえん - Chín mươi yên.', noteEn: 'kyuu - きゅうじゅうえん - Ninety yen.' },
-        { slug: 'vk-juu', sourceJa: '十 (じゅう)', reading: 'juu', vi: 'Mười (10)', en: 'Ten (10)', noteVi: 'じゅう - じゅうにんのがくせい - Mười học sinh.', noteEn: 'juu - じゅうにんのがくせい - Ten students.' },
+        {
+          slug: 'vk-ichi',
+          sourceJa: '一 (いち)',
+          reading: 'ichi',
+          vi: 'Một (1)',
+          en: 'One (1)',
+          noteVi: 'いち - りんごがいっこあります - Có một quả táo.',
+          noteEn: 'ichi - りんごがいっこあります - There is one apple.',
+        },
+        {
+          slug: 'vk-ni',
+          sourceJa: '二 (に)',
+          reading: 'ni',
+          vi: 'Hai (2)',
+          en: 'Two (2)',
+          noteVi: 'に - ねこがにひきいます - Có hai con mèo.',
+          noteEn: 'ni - ねこがにひきいます - There are two cats.',
+        },
+        {
+          slug: 'vk-san',
+          sourceJa: '三 (さん)',
+          reading: 'san',
+          vi: 'Ba (3)',
+          en: 'Three (3)',
+          noteVi: 'さん - さんじかんべんきょうします - Học ba tiếng đồng hồ.',
+          noteEn: 'san - さんじかんべんきょうします - I study for three hours.',
+        },
+        {
+          slug: 'vk-shi',
+          sourceJa: '四 (し / よん)',
+          reading: 'shi / yon',
+          vi: 'Bốn (4)',
+          en: 'Four (4)',
+          noteVi: 'よん - よんほんのえんぴつ - Bốn cây bút chì.',
+          noteEn: 'yon - よんほんのえんぴつ - Four pencils.',
+        },
+        {
+          slug: 'vk-go',
+          sourceJa: '五 (ご)',
+          reading: 'go',
+          vi: 'Năm (5)',
+          en: 'Five (5)',
+          noteVi: 'ご - ごにんのともだち - Năm người bạn.',
+          noteEn: 'go - ごにんのともだち - Five friends.',
+        },
+        {
+          slug: 'vk-roku',
+          sourceJa: '六 (ろく)',
+          reading: 'roku',
+          vi: 'Sáu (6)',
+          en: 'Six (6)',
+          noteVi: 'ろく - ろくじにおきます - Thức dậy lúc 6 giờ.',
+          noteEn: "roku - ろくじにおきます - I wake up at 6 o'clock.",
+        },
+        {
+          slug: 'vk-nana',
+          sourceJa: '七 (なな / しち)',
+          reading: 'nana / shichi',
+          vi: 'Bảy (7)',
+          en: 'Seven (7)',
+          noteVi: 'なな - ななだいのくるま - Bảy chiếc xe.',
+          noteEn: 'nana - ななだいのくるま - Seven cars.',
+        },
+        {
+          slug: 'vk-hachi',
+          sourceJa: '八 (はち)',
+          reading: 'hachi',
+          vi: 'Tám (8)',
+          en: 'Eight (8)',
+          noteVi: 'はち - はちじかんねむります - Ngủ 8 tiếng.',
+          noteEn: 'hachi - はちじかんねむります - I sleep for 8 hours.',
+        },
+        {
+          slug: 'vk-kyuu',
+          sourceJa: '九 (きゅう / く)',
+          reading: 'kyuu / ku',
+          vi: 'Chín (9)',
+          en: 'Nine (9)',
+          noteVi: 'きゅう - きゅうじゅうえん - Chín mươi yên.',
+          noteEn: 'kyuu - きゅうじゅうえん - Ninety yen.',
+        },
+        {
+          slug: 'vk-juu',
+          sourceJa: '十 (じゅう)',
+          reading: 'juu',
+          vi: 'Mười (10)',
+          en: 'Ten (10)',
+          noteVi: 'じゅう - じゅうにんのがくせい - Mười học sinh.',
+          noteEn: 'juu - じゅうにんのがくせい - Ten students.',
+        },
       ],
     },
     {
@@ -1171,14 +1315,78 @@ async function main() {
       descriptionJa: '時間、曜日、月の言い方を学びます。',
       order: 23,
       items: [
-        { slug: 'vk-ima', sourceJa: '今 (いま)', reading: 'ima', vi: 'Bây giờ', en: 'Now', noteVi: 'いまなんじですか - Bây giờ là mấy giờ?', noteEn: 'いまなんじですか - What time is it now?' },
-        { slug: 'vk-kyou', sourceJa: '今日 (きょう)', reading: 'kyou', vi: 'Hôm nay', en: 'Today', noteVi: 'きょうはいいてんきですね - Hôm nay trời đẹp nhỉ.', noteEn: 'きょうはいいてんきですね - Nice weather today, isn\'t it?' },
-        { slug: 'vk-ashita', sourceJa: '明日 (あした)', reading: 'ashita', vi: 'Ngày mai', en: 'Tomorrow', noteVi: 'あしたはやすみです - Ngày mai là ngày nghỉ.', noteEn: 'あしたはやすみです - Tomorrow is a day off.' },
-        { slug: 'vk-kinou', sourceJa: '昨日 (きのう)', reading: 'kinou', vi: 'Hôm qua', en: 'Yesterday', noteVi: 'きのうえいがをみました - Hôm qua tôi đã xem phim.', noteEn: 'きのうえいがをみました - I watched a movie yesterday.' },
-        { slug: 'vk-getsu', sourceJa: '月曜日 (げつようび)', reading: 'getsuyoubi', vi: 'Thứ Hai', en: 'Monday', noteVi: 'げつようびにがっこうへいきます - Thứ Hai tôi đi học.', noteEn: 'げつようびにがっこうへいきます - I go to school on Monday.' },
-        { slug: 'vk-sui', sourceJa: '水曜日 (すいようび)', reading: 'suiyoubi', vi: 'Thứ Tư', en: 'Wednesday', noteVi: 'すいようびはにほんごのじゅぎょうです - Thứ Tư là lớp tiếng Nhật.', noteEn: 'すいようびはにほんごのじゅぎょうです - Wednesday is Japanese class.' },
-        { slug: 'vk-nichi', sourceJa: '日曜日 (にちようび)', reading: 'nichiyoubi', vi: 'Chủ Nhật', en: 'Sunday', noteVi: 'にちようびはやすみます - Chủ Nhật tôi nghỉ ngơi.', noteEn: 'にちようびはやすみます - I rest on Sunday.' },
-        { slug: 'vk-asa', sourceJa: '朝 (あさ)', reading: 'asa', vi: 'Buổi sáng', en: 'Morning', noteVi: 'まいあさはちじにおきます - Mỗi sáng tôi dậy lúc 8 giờ.', noteEn: 'まいあさはちじにおきます - I wake up at 8 every morning.' },
+        {
+          slug: 'vk-ima',
+          sourceJa: '今 (いま)',
+          reading: 'ima',
+          vi: 'Bây giờ',
+          en: 'Now',
+          noteVi: 'いまなんじですか - Bây giờ là mấy giờ?',
+          noteEn: 'いまなんじですか - What time is it now?',
+        },
+        {
+          slug: 'vk-kyou',
+          sourceJa: '今日 (きょう)',
+          reading: 'kyou',
+          vi: 'Hôm nay',
+          en: 'Today',
+          noteVi: 'きょうはいいてんきですね - Hôm nay trời đẹp nhỉ.',
+          noteEn: "きょうはいいてんきですね - Nice weather today, isn't it?",
+        },
+        {
+          slug: 'vk-ashita',
+          sourceJa: '明日 (あした)',
+          reading: 'ashita',
+          vi: 'Ngày mai',
+          en: 'Tomorrow',
+          noteVi: 'あしたはやすみです - Ngày mai là ngày nghỉ.',
+          noteEn: 'あしたはやすみです - Tomorrow is a day off.',
+        },
+        {
+          slug: 'vk-kinou',
+          sourceJa: '昨日 (きのう)',
+          reading: 'kinou',
+          vi: 'Hôm qua',
+          en: 'Yesterday',
+          noteVi: 'きのうえいがをみました - Hôm qua tôi đã xem phim.',
+          noteEn: 'きのうえいがをみました - I watched a movie yesterday.',
+        },
+        {
+          slug: 'vk-getsu',
+          sourceJa: '月曜日 (げつようび)',
+          reading: 'getsuyoubi',
+          vi: 'Thứ Hai',
+          en: 'Monday',
+          noteVi: 'げつようびにがっこうへいきます - Thứ Hai tôi đi học.',
+          noteEn: 'げつようびにがっこうへいきます - I go to school on Monday.',
+        },
+        {
+          slug: 'vk-sui',
+          sourceJa: '水曜日 (すいようび)',
+          reading: 'suiyoubi',
+          vi: 'Thứ Tư',
+          en: 'Wednesday',
+          noteVi: 'すいようびはにほんごのじゅぎょうです - Thứ Tư là lớp tiếng Nhật.',
+          noteEn: 'すいようびはにほんごのじゅぎょうです - Wednesday is Japanese class.',
+        },
+        {
+          slug: 'vk-nichi',
+          sourceJa: '日曜日 (にちようび)',
+          reading: 'nichiyoubi',
+          vi: 'Chủ Nhật',
+          en: 'Sunday',
+          noteVi: 'にちようびはやすみます - Chủ Nhật tôi nghỉ ngơi.',
+          noteEn: 'にちようびはやすみます - I rest on Sunday.',
+        },
+        {
+          slug: 'vk-asa',
+          sourceJa: '朝 (あさ)',
+          reading: 'asa',
+          vi: 'Buổi sáng',
+          en: 'Morning',
+          noteVi: 'まいあさはちじにおきます - Mỗi sáng tôi dậy lúc 8 giờ.',
+          noteEn: 'まいあさはちじにおきます - I wake up at 8 every morning.',
+        },
       ],
     },
     {
@@ -1191,13 +1399,69 @@ async function main() {
       descriptionJa: '家族の呼び方を学びます。',
       order: 24,
       items: [
-        { slug: 'vk-chichi', sourceJa: '父 (ちち)', reading: 'chichi', vi: 'Bố (nói về bố mình)', en: 'My father', noteVi: 'ちちはいしゃです - Bố tôi là bác sĩ.', noteEn: 'ちちはいしゃです - My father is a doctor.' },
-        { slug: 'vk-haha', sourceJa: '母 (はは)', reading: 'haha', vi: 'Mẹ (nói về mẹ mình)', en: 'My mother', noteVi: 'はははせんせいです - Mẹ tôi là giáo viên.', noteEn: 'はははせんせいです - My mother is a teacher.' },
-        { slug: 'vk-ani', sourceJa: '兄 (あに)', reading: 'ani', vi: 'Anh trai (của mình)', en: 'My older brother', noteVi: 'あにはだいがくせいです - Anh tôi là sinh viên đại học.', noteEn: 'あにはだいがくせいです - My older brother is a university student.' },
-        { slug: 'vk-ane', sourceJa: '姉 (あね)', reading: 'ane', vi: 'Chị gái (của mình)', en: 'My older sister', noteVi: 'あねははたらいています - Chị tôi đang đi làm.', noteEn: 'あねははたらいています - My older sister is working.' },
-        { slug: 'vk-otouto', sourceJa: '弟 (おとうと)', reading: 'otouto', vi: 'Em trai (của mình)', en: 'My younger brother', noteVi: 'おとうとはしょうがくせいです - Em trai tôi là học sinh tiểu học.', noteEn: 'おとうとはしょうがくせいです - My younger brother is an elementary student.' },
-        { slug: 'vk-imouto', sourceJa: '妹 (いもうと)', reading: 'imouto', vi: 'Em gái (của mình)', en: 'My younger sister', noteVi: 'いもうとはかわいいです - Em gái tôi dễ thương.', noteEn: 'いもうとはかわいいです - My younger sister is cute.' },
-        { slug: 'vk-kazoku', sourceJa: '家族 (かぞく)', reading: 'kazoku', vi: 'Gia đình', en: 'Family', noteVi: 'わたしのかぞくはごにんです - Gia đình tôi có 5 người.', noteEn: 'わたしのかぞくはごにんです - My family has 5 members.' },
+        {
+          slug: 'vk-chichi',
+          sourceJa: '父 (ちち)',
+          reading: 'chichi',
+          vi: 'Bố (nói về bố mình)',
+          en: 'My father',
+          noteVi: 'ちちはいしゃです - Bố tôi là bác sĩ.',
+          noteEn: 'ちちはいしゃです - My father is a doctor.',
+        },
+        {
+          slug: 'vk-haha',
+          sourceJa: '母 (はは)',
+          reading: 'haha',
+          vi: 'Mẹ (nói về mẹ mình)',
+          en: 'My mother',
+          noteVi: 'はははせんせいです - Mẹ tôi là giáo viên.',
+          noteEn: 'はははせんせいです - My mother is a teacher.',
+        },
+        {
+          slug: 'vk-ani',
+          sourceJa: '兄 (あに)',
+          reading: 'ani',
+          vi: 'Anh trai (của mình)',
+          en: 'My older brother',
+          noteVi: 'あにはだいがくせいです - Anh tôi là sinh viên đại học.',
+          noteEn: 'あにはだいがくせいです - My older brother is a university student.',
+        },
+        {
+          slug: 'vk-ane',
+          sourceJa: '姉 (あね)',
+          reading: 'ane',
+          vi: 'Chị gái (của mình)',
+          en: 'My older sister',
+          noteVi: 'あねははたらいています - Chị tôi đang đi làm.',
+          noteEn: 'あねははたらいています - My older sister is working.',
+        },
+        {
+          slug: 'vk-otouto',
+          sourceJa: '弟 (おとうと)',
+          reading: 'otouto',
+          vi: 'Em trai (của mình)',
+          en: 'My younger brother',
+          noteVi: 'おとうとはしょうがくせいです - Em trai tôi là học sinh tiểu học.',
+          noteEn: 'おとうとはしょうがくせいです - My younger brother is an elementary student.',
+        },
+        {
+          slug: 'vk-imouto',
+          sourceJa: '妹 (いもうと)',
+          reading: 'imouto',
+          vi: 'Em gái (của mình)',
+          en: 'My younger sister',
+          noteVi: 'いもうとはかわいいです - Em gái tôi dễ thương.',
+          noteEn: 'いもうとはかわいいです - My younger sister is cute.',
+        },
+        {
+          slug: 'vk-kazoku',
+          sourceJa: '家族 (かぞく)',
+          reading: 'kazoku',
+          vi: 'Gia đình',
+          en: 'Family',
+          noteVi: 'わたしのかぞくはごにんです - Gia đình tôi có 5 người.',
+          noteEn: 'わたしのかぞくはごにんです - My family has 5 members.',
+        },
       ],
     },
     {
@@ -1210,14 +1474,78 @@ async function main() {
       descriptionJa: '体の部位の名前を学びます。',
       order: 25,
       items: [
-        { slug: 'vk-atama', sourceJa: '頭 (あたま)', reading: 'atama', vi: 'Đầu', en: 'Head', noteVi: 'あたまがいたいです - Tôi đau đầu.', noteEn: 'あたまがいたいです - I have a headache.' },
-        { slug: 'vk-me', sourceJa: '目 (め)', reading: 'me', vi: 'Mắt', en: 'Eyes', noteVi: 'めがおおきいです - Mắt to.', noteEn: 'めがおおきいです - Big eyes.' },
-        { slug: 'vk-hana', sourceJa: '鼻 (はな)', reading: 'hana', vi: 'Mũi', en: 'Nose', noteVi: 'はながつまっています - Mũi bị nghẹt.', noteEn: 'はながつまっています - My nose is stuffy.' },
-        { slug: 'vk-kuchi', sourceJa: '口 (くち)', reading: 'kuchi', vi: 'Miệng', en: 'Mouth', noteVi: 'くちをあけてください - Hãy mở miệng ra.', noteEn: 'くちをあけてください - Please open your mouth.' },
-        { slug: 'vk-te', sourceJa: '手 (て)', reading: 'te', vi: 'Tay', en: 'Hand', noteVi: 'てをあらってください - Hãy rửa tay.', noteEn: 'てをあらってください - Please wash your hands.' },
-        { slug: 'vk-ashi', sourceJa: '足 (あし)', reading: 'ashi', vi: 'Chân / Bàn chân', en: 'Leg / Foot', noteVi: 'あしがはやいです - Chạy nhanh chân.', noteEn: 'あしがはやいです - Fast on foot.' },
-        { slug: 'vk-mimi', sourceJa: '耳 (みみ)', reading: 'mimi', vi: 'Tai', en: 'Ear', noteVi: 'みみがとおいです - Tai nghe kém.', noteEn: 'みみがとおいです - Hard of hearing.' },
-        { slug: 'vk-kata', sourceJa: '肩 (かた)', reading: 'kata', vi: 'Vai', en: 'Shoulder', noteVi: 'かたがこっています - Vai bị mỏi.', noteEn: 'かたがこっています - My shoulders are stiff.' },
+        {
+          slug: 'vk-atama',
+          sourceJa: '頭 (あたま)',
+          reading: 'atama',
+          vi: 'Đầu',
+          en: 'Head',
+          noteVi: 'あたまがいたいです - Tôi đau đầu.',
+          noteEn: 'あたまがいたいです - I have a headache.',
+        },
+        {
+          slug: 'vk-me',
+          sourceJa: '目 (め)',
+          reading: 'me',
+          vi: 'Mắt',
+          en: 'Eyes',
+          noteVi: 'めがおおきいです - Mắt to.',
+          noteEn: 'めがおおきいです - Big eyes.',
+        },
+        {
+          slug: 'vk-hana',
+          sourceJa: '鼻 (はな)',
+          reading: 'hana',
+          vi: 'Mũi',
+          en: 'Nose',
+          noteVi: 'はながつまっています - Mũi bị nghẹt.',
+          noteEn: 'はながつまっています - My nose is stuffy.',
+        },
+        {
+          slug: 'vk-kuchi',
+          sourceJa: '口 (くち)',
+          reading: 'kuchi',
+          vi: 'Miệng',
+          en: 'Mouth',
+          noteVi: 'くちをあけてください - Hãy mở miệng ra.',
+          noteEn: 'くちをあけてください - Please open your mouth.',
+        },
+        {
+          slug: 'vk-te',
+          sourceJa: '手 (て)',
+          reading: 'te',
+          vi: 'Tay',
+          en: 'Hand',
+          noteVi: 'てをあらってください - Hãy rửa tay.',
+          noteEn: 'てをあらってください - Please wash your hands.',
+        },
+        {
+          slug: 'vk-ashi',
+          sourceJa: '足 (あし)',
+          reading: 'ashi',
+          vi: 'Chân / Bàn chân',
+          en: 'Leg / Foot',
+          noteVi: 'あしがはやいです - Chạy nhanh chân.',
+          noteEn: 'あしがはやいです - Fast on foot.',
+        },
+        {
+          slug: 'vk-mimi',
+          sourceJa: '耳 (みみ)',
+          reading: 'mimi',
+          vi: 'Tai',
+          en: 'Ear',
+          noteVi: 'みみがとおいです - Tai nghe kém.',
+          noteEn: 'みみがとおいです - Hard of hearing.',
+        },
+        {
+          slug: 'vk-kata',
+          sourceJa: '肩 (かた)',
+          reading: 'kata',
+          vi: 'Vai',
+          en: 'Shoulder',
+          noteVi: 'かたがこっています - Vai bị mỏi.',
+          noteEn: 'かたがこっています - My shoulders are stiff.',
+        },
       ],
     },
     {
@@ -1230,14 +1558,78 @@ async function main() {
       descriptionJa: '食べ物と飲み物の言葉を学びます。',
       order: 26,
       items: [
-        { slug: 'vk-gohan', sourceJa: 'ご飯 (ごはん)', reading: 'gohan', vi: 'Cơm / Bữa ăn', en: 'Rice / Meal', noteVi: 'ごはんをたべます - Tôi ăn cơm.', noteEn: 'ごはんをたべます - I eat rice.' },
-        { slug: 'vk-mizu', sourceJa: '水 (みず)', reading: 'mizu', vi: 'Nước', en: 'Water', noteVi: 'みずをのみます - Tôi uống nước.', noteEn: 'みずをのみます - I drink water.' },
-        { slug: 'vk-ocha', sourceJa: 'お茶 (おちゃ)', reading: 'ocha', vi: 'Trà xanh', en: 'Green tea', noteVi: 'おちゃをいっぱいください - Cho tôi một tách trà.', noteEn: 'おちゃをいっぱいください - Please give me a cup of tea.' },
-        { slug: 'vk-pan', sourceJa: 'パン', reading: 'pan', vi: 'Bánh mì', en: 'Bread', noteVi: 'あさごはんにパンをたべます - Tôi ăn bánh mì vào bữa sáng.', noteEn: 'あさごはんにパンをたべます - I eat bread for breakfast.' },
-        { slug: 'vk-sakana', sourceJa: '魚 (さかな)', reading: 'sakana', vi: 'Cá', en: 'Fish', noteVi: 'さかなはすきですか - Bạn thích cá không?', noteEn: 'さかなはすきですか - Do you like fish?' },
-        { slug: 'vk-yasai', sourceJa: '野菜 (やさい)', reading: 'yasai', vi: 'Rau củ', en: 'Vegetables', noteVi: 'やさいはからだにいいです - Rau củ tốt cho sức khỏe.', noteEn: 'やさいはからだにいいです - Vegetables are good for your health.' },
-        { slug: 'vk-kudamono', sourceJa: '果物 (くだもの)', reading: 'kudamono', vi: 'Hoa quả', en: 'Fruit', noteVi: 'くだものがすきです - Tôi thích hoa quả.', noteEn: 'くだものがすきです - I like fruit.' },
-        { slug: 'vk-niku', sourceJa: '肉 (にく)', reading: 'niku', vi: 'Thịt', en: 'Meat', noteVi: 'にくをすこしたべます - Tôi ăn một ít thịt.', noteEn: 'にくをすこしたべます - I eat a little meat.' },
+        {
+          slug: 'vk-gohan',
+          sourceJa: 'ご飯 (ごはん)',
+          reading: 'gohan',
+          vi: 'Cơm / Bữa ăn',
+          en: 'Rice / Meal',
+          noteVi: 'ごはんをたべます - Tôi ăn cơm.',
+          noteEn: 'ごはんをたべます - I eat rice.',
+        },
+        {
+          slug: 'vk-mizu',
+          sourceJa: '水 (みず)',
+          reading: 'mizu',
+          vi: 'Nước',
+          en: 'Water',
+          noteVi: 'みずをのみます - Tôi uống nước.',
+          noteEn: 'みずをのみます - I drink water.',
+        },
+        {
+          slug: 'vk-ocha',
+          sourceJa: 'お茶 (おちゃ)',
+          reading: 'ocha',
+          vi: 'Trà xanh',
+          en: 'Green tea',
+          noteVi: 'おちゃをいっぱいください - Cho tôi một tách trà.',
+          noteEn: 'おちゃをいっぱいください - Please give me a cup of tea.',
+        },
+        {
+          slug: 'vk-pan',
+          sourceJa: 'パン',
+          reading: 'pan',
+          vi: 'Bánh mì',
+          en: 'Bread',
+          noteVi: 'あさごはんにパンをたべます - Tôi ăn bánh mì vào bữa sáng.',
+          noteEn: 'あさごはんにパンをたべます - I eat bread for breakfast.',
+        },
+        {
+          slug: 'vk-sakana',
+          sourceJa: '魚 (さかな)',
+          reading: 'sakana',
+          vi: 'Cá',
+          en: 'Fish',
+          noteVi: 'さかなはすきですか - Bạn thích cá không?',
+          noteEn: 'さかなはすきですか - Do you like fish?',
+        },
+        {
+          slug: 'vk-yasai',
+          sourceJa: '野菜 (やさい)',
+          reading: 'yasai',
+          vi: 'Rau củ',
+          en: 'Vegetables',
+          noteVi: 'やさいはからだにいいです - Rau củ tốt cho sức khỏe.',
+          noteEn: 'やさいはからだにいいです - Vegetables are good for your health.',
+        },
+        {
+          slug: 'vk-kudamono',
+          sourceJa: '果物 (くだもの)',
+          reading: 'kudamono',
+          vi: 'Hoa quả',
+          en: 'Fruit',
+          noteVi: 'くだものがすきです - Tôi thích hoa quả.',
+          noteEn: 'くだものがすきです - I like fruit.',
+        },
+        {
+          slug: 'vk-niku',
+          sourceJa: '肉 (にく)',
+          reading: 'niku',
+          vi: 'Thịt',
+          en: 'Meat',
+          noteVi: 'にくをすこしたべます - Tôi ăn một ít thịt.',
+          noteEn: 'にくをすこしたべます - I eat a little meat.',
+        },
       ],
     },
     {
@@ -1250,13 +1642,69 @@ async function main() {
       descriptionJa: '乗り物と移動に関する言葉を学びます。',
       order: 27,
       items: [
-        { slug: 'vk-densha', sourceJa: '電車 (でんしゃ)', reading: 'densha', vi: 'Tàu điện', en: 'Train', noteVi: 'でんしゃでがっこうへいきます - Tôi đi học bằng tàu điện.', noteEn: 'でんしゃでがっこうへいきます - I go to school by train.' },
-        { slug: 'vk-basu', sourceJa: 'バス', reading: 'basu', vi: 'Xe buýt', en: 'Bus', noteVi: 'バスにのります - Tôi lên xe buýt.', noteEn: 'バスにのります - I take the bus.' },
-        { slug: 'vk-takushi', sourceJa: 'タクシー', reading: 'takushii', vi: 'Taxi', en: 'Taxi', noteVi: 'タクシーをよびます - Tôi gọi taxi.', noteEn: 'タクシーをよびます - I call a taxi.' },
-        { slug: 'vk-jitensha', sourceJa: '自転車 (じてんしゃ)', reading: 'jitensha', vi: 'Xe đạp', en: 'Bicycle', noteVi: 'じてんしゃでいきます - Tôi đi bằng xe đạp.', noteEn: 'じてんしゃでいきます - I go by bicycle.' },
-        { slug: 'vk-eki', sourceJa: '駅 (えき)', reading: 'eki', vi: 'Ga tàu', en: 'Train station', noteVi: 'えきはどこですか - Ga tàu ở đâu?', noteEn: 'えきはどこですか - Where is the train station?' },
-        { slug: 'vk-migi', sourceJa: '右 (みぎ)', reading: 'migi', vi: 'Phải (hướng)', en: 'Right (direction)', noteVi: 'みぎにまがってください - Hãy rẽ phải.', noteEn: 'みぎにまがってください - Please turn right.' },
-        { slug: 'vk-hidari', sourceJa: '左 (ひだり)', reading: 'hidari', vi: 'Trái (hướng)', en: 'Left (direction)', noteVi: 'ひだりにまがってください - Hãy rẽ trái.', noteEn: 'ひだりにまがってください - Please turn left.' },
+        {
+          slug: 'vk-densha',
+          sourceJa: '電車 (でんしゃ)',
+          reading: 'densha',
+          vi: 'Tàu điện',
+          en: 'Train',
+          noteVi: 'でんしゃでがっこうへいきます - Tôi đi học bằng tàu điện.',
+          noteEn: 'でんしゃでがっこうへいきます - I go to school by train.',
+        },
+        {
+          slug: 'vk-basu',
+          sourceJa: 'バス',
+          reading: 'basu',
+          vi: 'Xe buýt',
+          en: 'Bus',
+          noteVi: 'バスにのります - Tôi lên xe buýt.',
+          noteEn: 'バスにのります - I take the bus.',
+        },
+        {
+          slug: 'vk-takushi',
+          sourceJa: 'タクシー',
+          reading: 'takushii',
+          vi: 'Taxi',
+          en: 'Taxi',
+          noteVi: 'タクシーをよびます - Tôi gọi taxi.',
+          noteEn: 'タクシーをよびます - I call a taxi.',
+        },
+        {
+          slug: 'vk-jitensha',
+          sourceJa: '自転車 (じてんしゃ)',
+          reading: 'jitensha',
+          vi: 'Xe đạp',
+          en: 'Bicycle',
+          noteVi: 'じてんしゃでいきます - Tôi đi bằng xe đạp.',
+          noteEn: 'じてんしゃでいきます - I go by bicycle.',
+        },
+        {
+          slug: 'vk-eki',
+          sourceJa: '駅 (えき)',
+          reading: 'eki',
+          vi: 'Ga tàu',
+          en: 'Train station',
+          noteVi: 'えきはどこですか - Ga tàu ở đâu?',
+          noteEn: 'えきはどこですか - Where is the train station?',
+        },
+        {
+          slug: 'vk-migi',
+          sourceJa: '右 (みぎ)',
+          reading: 'migi',
+          vi: 'Phải (hướng)',
+          en: 'Right (direction)',
+          noteVi: 'みぎにまがってください - Hãy rẽ phải.',
+          noteEn: 'みぎにまがってください - Please turn right.',
+        },
+        {
+          slug: 'vk-hidari',
+          sourceJa: '左 (ひだり)',
+          reading: 'hidari',
+          vi: 'Trái (hướng)',
+          en: 'Left (direction)',
+          noteVi: 'ひだりにまがってください - Hãy rẽ trái.',
+          noteEn: 'ひだりにまがってください - Please turn left.',
+        },
       ],
     },
     {
@@ -1269,14 +1717,78 @@ async function main() {
       descriptionJa: '学校、教室、文房具に関する言葉を学びます。',
       order: 28,
       items: [
-        { slug: 'vk-gakkou', sourceJa: '学校 (がっこう)', reading: 'gakkou', vi: 'Trường học', en: 'School', noteVi: 'がっこうはたのしいです - Trường học vui lắm.', noteEn: 'がっこうはたのしいです - School is fun.' },
-        { slug: 'vk-kyoushitsu', sourceJa: '教室 (きょうしつ)', reading: 'kyoushitsu', vi: 'Lớp học / Phòng học', en: 'Classroom', noteVi: 'きょうしつにはいります - Vào lớp học.', noteEn: 'きょうしつにはいります - I enter the classroom.' },
-        { slug: 'vk-sensei', sourceJa: '先生 (せんせい)', reading: 'sensei', vi: 'Giáo viên / Thầy cô', en: 'Teacher', noteVi: 'せんせいはやさしいです - Thầy/cô giáo rất thân thiện.', noteEn: 'せんせいはやさしいです - The teacher is kind.' },
-        { slug: 'vk-gakusei', sourceJa: '学生 (がくせい)', reading: 'gakusei', vi: 'Học sinh / Sinh viên', en: 'Student', noteVi: 'わたしはがくせいです - Tôi là học sinh.', noteEn: 'わたしはがくせいです - I am a student.' },
-        { slug: 'vk-hon', sourceJa: '本 (ほん)', reading: 'hon', vi: 'Sách', en: 'Book', noteVi: 'ほんをよみます - Tôi đọc sách.', noteEn: 'ほんをよみます - I read a book.' },
-        { slug: 'vk-enpitsu', sourceJa: '鉛筆 (えんぴつ)', reading: 'enpitsu', vi: 'Bút chì', en: 'Pencil', noteVi: 'えんぴつでかきます - Tôi viết bằng bút chì.', noteEn: 'えんぴつでかきます - I write with a pencil.' },
-        { slug: 'vk-nooto', sourceJa: 'ノート', reading: 'nooto', vi: 'Vở ghi chú', en: 'Notebook', noteVi: 'ノートにかきます - Tôi ghi vào vở.', noteEn: 'ノートにかきます - I write in my notebook.' },
-        { slug: 'vk-kokuban', sourceJa: '黒板 (こくばん)', reading: 'kokuban', vi: 'Bảng đen', en: 'Blackboard', noteVi: 'こくばんをみてください - Hãy nhìn lên bảng.', noteEn: 'こくばんをみてください - Please look at the blackboard.' },
+        {
+          slug: 'vk-gakkou',
+          sourceJa: '学校 (がっこう)',
+          reading: 'gakkou',
+          vi: 'Trường học',
+          en: 'School',
+          noteVi: 'がっこうはたのしいです - Trường học vui lắm.',
+          noteEn: 'がっこうはたのしいです - School is fun.',
+        },
+        {
+          slug: 'vk-kyoushitsu',
+          sourceJa: '教室 (きょうしつ)',
+          reading: 'kyoushitsu',
+          vi: 'Lớp học / Phòng học',
+          en: 'Classroom',
+          noteVi: 'きょうしつにはいります - Vào lớp học.',
+          noteEn: 'きょうしつにはいります - I enter the classroom.',
+        },
+        {
+          slug: 'vk-sensei',
+          sourceJa: '先生 (せんせい)',
+          reading: 'sensei',
+          vi: 'Giáo viên / Thầy cô',
+          en: 'Teacher',
+          noteVi: 'せんせいはやさしいです - Thầy/cô giáo rất thân thiện.',
+          noteEn: 'せんせいはやさしいです - The teacher is kind.',
+        },
+        {
+          slug: 'vk-gakusei',
+          sourceJa: '学生 (がくせい)',
+          reading: 'gakusei',
+          vi: 'Học sinh / Sinh viên',
+          en: 'Student',
+          noteVi: 'わたしはがくせいです - Tôi là học sinh.',
+          noteEn: 'わたしはがくせいです - I am a student.',
+        },
+        {
+          slug: 'vk-hon',
+          sourceJa: '本 (ほん)',
+          reading: 'hon',
+          vi: 'Sách',
+          en: 'Book',
+          noteVi: 'ほんをよみます - Tôi đọc sách.',
+          noteEn: 'ほんをよみます - I read a book.',
+        },
+        {
+          slug: 'vk-enpitsu',
+          sourceJa: '鉛筆 (えんぴつ)',
+          reading: 'enpitsu',
+          vi: 'Bút chì',
+          en: 'Pencil',
+          noteVi: 'えんぴつでかきます - Tôi viết bằng bút chì.',
+          noteEn: 'えんぴつでかきます - I write with a pencil.',
+        },
+        {
+          slug: 'vk-nooto',
+          sourceJa: 'ノート',
+          reading: 'nooto',
+          vi: 'Vở ghi chú',
+          en: 'Notebook',
+          noteVi: 'ノートにかきます - Tôi ghi vào vở.',
+          noteEn: 'ノートにかきます - I write in my notebook.',
+        },
+        {
+          slug: 'vk-kokuban',
+          sourceJa: '黒板 (こくばん)',
+          reading: 'kokuban',
+          vi: 'Bảng đen',
+          en: 'Blackboard',
+          noteVi: 'こくばんをみてください - Hãy nhìn lên bảng.',
+          noteEn: 'こくばんをみてください - Please look at the blackboard.',
+        },
       ],
     },
     {
@@ -1289,13 +1801,69 @@ async function main() {
       descriptionJa: '色と基本的な形の名前を学びます。',
       order: 29,
       items: [
-        { slug: 'vk-aka', sourceJa: '赤 (あか)', reading: 'aka', vi: 'Màu đỏ', en: 'Red', noteVi: 'あかいはながきれいです - Hoa màu đỏ thật đẹp.', noteEn: 'あかいはながきれいです - The red flower is beautiful.' },
-        { slug: 'vk-ao', sourceJa: '青 (あお)', reading: 'ao', vi: 'Màu xanh lam / Xanh lá', en: 'Blue / Green', noteVi: 'そらはあおいです - Bầu trời màu xanh.', noteEn: 'そらはあおいです - The sky is blue.' },
-        { slug: 'vk-shiro', sourceJa: '白 (しろ)', reading: 'shiro', vi: 'Màu trắng', en: 'White', noteVi: 'しろいゆきがふっています - Tuyết trắng đang rơi.', noteEn: 'しろいゆきがふっています - White snow is falling.' },
-        { slug: 'vk-kuro', sourceJa: '黒 (くろ)', reading: 'kuro', vi: 'Màu đen', en: 'Black', noteVi: 'くろいねこがいます - Có một con mèo đen.', noteEn: 'くろいねこがいます - There is a black cat.' },
-        { slug: 'vk-ki', sourceJa: '黄色 (きいろ)', reading: 'kiiro', vi: 'Màu vàng', en: 'Yellow', noteVi: 'きいろいほしがみえます - Nhìn thấy những ngôi sao vàng.', noteEn: 'きいろいほしがみえます - Yellow stars are visible.' },
-        { slug: 'vk-maru', sourceJa: '丸 (まる)', reading: 'maru', vi: 'Hình tròn', en: 'Circle', noteVi: 'まるいかたちです - Hình dạng tròn.', noteEn: 'まるいかたちです - It is a round shape.' },
-        { slug: 'vk-shikaku', sourceJa: '四角 (しかく)', reading: 'shikaku', vi: 'Hình vuông / chữ nhật', en: 'Square / Rectangle', noteVi: 'しかくいはこ - Hộp hình vuông.', noteEn: 'しかくいはこ - A square box.' },
+        {
+          slug: 'vk-aka',
+          sourceJa: '赤 (あか)',
+          reading: 'aka',
+          vi: 'Màu đỏ',
+          en: 'Red',
+          noteVi: 'あかいはながきれいです - Hoa màu đỏ thật đẹp.',
+          noteEn: 'あかいはながきれいです - The red flower is beautiful.',
+        },
+        {
+          slug: 'vk-ao',
+          sourceJa: '青 (あお)',
+          reading: 'ao',
+          vi: 'Màu xanh lam / Xanh lá',
+          en: 'Blue / Green',
+          noteVi: 'そらはあおいです - Bầu trời màu xanh.',
+          noteEn: 'そらはあおいです - The sky is blue.',
+        },
+        {
+          slug: 'vk-shiro',
+          sourceJa: '白 (しろ)',
+          reading: 'shiro',
+          vi: 'Màu trắng',
+          en: 'White',
+          noteVi: 'しろいゆきがふっています - Tuyết trắng đang rơi.',
+          noteEn: 'しろいゆきがふっています - White snow is falling.',
+        },
+        {
+          slug: 'vk-kuro',
+          sourceJa: '黒 (くろ)',
+          reading: 'kuro',
+          vi: 'Màu đen',
+          en: 'Black',
+          noteVi: 'くろいねこがいます - Có một con mèo đen.',
+          noteEn: 'くろいねこがいます - There is a black cat.',
+        },
+        {
+          slug: 'vk-ki',
+          sourceJa: '黄色 (きいろ)',
+          reading: 'kiiro',
+          vi: 'Màu vàng',
+          en: 'Yellow',
+          noteVi: 'きいろいほしがみえます - Nhìn thấy những ngôi sao vàng.',
+          noteEn: 'きいろいほしがみえます - Yellow stars are visible.',
+        },
+        {
+          slug: 'vk-maru',
+          sourceJa: '丸 (まる)',
+          reading: 'maru',
+          vi: 'Hình tròn',
+          en: 'Circle',
+          noteVi: 'まるいかたちです - Hình dạng tròn.',
+          noteEn: 'まるいかたちです - It is a round shape.',
+        },
+        {
+          slug: 'vk-shikaku',
+          sourceJa: '四角 (しかく)',
+          reading: 'shikaku',
+          vi: 'Hình vuông / chữ nhật',
+          en: 'Square / Rectangle',
+          noteVi: 'しかくいはこ - Hộp hình vuông.',
+          noteEn: 'しかくいはこ - A square box.',
+        },
       ],
     },
     {
@@ -1308,14 +1876,78 @@ async function main() {
       descriptionJa: '人や物を描写するよく使う形容詞を学びます。',
       order: 30,
       items: [
-        { slug: 'vk-ookii', sourceJa: '大きい (おおきい)', reading: 'ookii', vi: 'To lớn', en: 'Big / Large', noteVi: 'このかばんはおおきいです - Cái túi này to.', noteEn: 'このかばんはおおきいです - This bag is big.' },
-        { slug: 'vk-chiisai', sourceJa: '小さい (ちいさい)', reading: 'chiisai', vi: 'Nhỏ', en: 'Small / Little', noteVi: 'ちいさいこどもがいます - Có một đứa trẻ nhỏ.', noteEn: 'ちいさいこどもがいます - There is a small child.' },
-        { slug: 'vk-ii', sourceJa: 'いい / 良い (よい)', reading: 'ii / yoi', vi: 'Tốt / Hay', en: 'Good', noteVi: 'このほんはいいです - Cuốn sách này hay.', noteEn: 'このほんはいいです - This book is good.' },
-        { slug: 'vk-warui', sourceJa: '悪い (わるい)', reading: 'warui', vi: 'Xấu / Tệ', en: 'Bad', noteVi: 'てんきがわるいです - Thời tiết xấu.', noteEn: 'てんきがわるいです - The weather is bad.' },
-        { slug: 'vk-atsui', sourceJa: '暑い (あつい)', reading: 'atsui', vi: 'Nóng (thời tiết)', en: 'Hot (weather)', noteVi: 'きょうはあついですね - Hôm nay nóng nhỉ.', noteEn: 'きょうはあついですね - It\'s hot today, isn\'t it?' },
-        { slug: 'vk-samui', sourceJa: '寒い (さむい)', reading: 'samui', vi: 'Lạnh (thời tiết)', en: 'Cold (weather)', noteVi: 'ふゆはさむいです - Mùa đông lạnh.', noteEn: 'ふゆはさむいです - Winter is cold.' },
-        { slug: 'vk-takai', sourceJa: '高い (たかい)', reading: 'takai', vi: 'Cao / Đắt', en: 'Tall / Expensive', noteVi: 'このくつはたかいです - Đôi giày này đắt.', noteEn: 'このくつはたかいです - These shoes are expensive.' },
-        { slug: 'vk-yasui', sourceJa: '安い (やすい)', reading: 'yasui', vi: 'Rẻ', en: 'Cheap / Inexpensive', noteVi: 'このみせはやすいです - Cửa hàng này rẻ.', noteEn: 'このみせはやすいです - This shop is cheap.' },
+        {
+          slug: 'vk-ookii',
+          sourceJa: '大きい (おおきい)',
+          reading: 'ookii',
+          vi: 'To lớn',
+          en: 'Big / Large',
+          noteVi: 'このかばんはおおきいです - Cái túi này to.',
+          noteEn: 'このかばんはおおきいです - This bag is big.',
+        },
+        {
+          slug: 'vk-chiisai',
+          sourceJa: '小さい (ちいさい)',
+          reading: 'chiisai',
+          vi: 'Nhỏ',
+          en: 'Small / Little',
+          noteVi: 'ちいさいこどもがいます - Có một đứa trẻ nhỏ.',
+          noteEn: 'ちいさいこどもがいます - There is a small child.',
+        },
+        {
+          slug: 'vk-ii',
+          sourceJa: 'いい / 良い (よい)',
+          reading: 'ii / yoi',
+          vi: 'Tốt / Hay',
+          en: 'Good',
+          noteVi: 'このほんはいいです - Cuốn sách này hay.',
+          noteEn: 'このほんはいいです - This book is good.',
+        },
+        {
+          slug: 'vk-warui',
+          sourceJa: '悪い (わるい)',
+          reading: 'warui',
+          vi: 'Xấu / Tệ',
+          en: 'Bad',
+          noteVi: 'てんきがわるいです - Thời tiết xấu.',
+          noteEn: 'てんきがわるいです - The weather is bad.',
+        },
+        {
+          slug: 'vk-atsui',
+          sourceJa: '暑い (あつい)',
+          reading: 'atsui',
+          vi: 'Nóng (thời tiết)',
+          en: 'Hot (weather)',
+          noteVi: 'きょうはあついですね - Hôm nay nóng nhỉ.',
+          noteEn: "きょうはあついですね - It's hot today, isn't it?",
+        },
+        {
+          slug: 'vk-samui',
+          sourceJa: '寒い (さむい)',
+          reading: 'samui',
+          vi: 'Lạnh (thời tiết)',
+          en: 'Cold (weather)',
+          noteVi: 'ふゆはさむいです - Mùa đông lạnh.',
+          noteEn: 'ふゆはさむいです - Winter is cold.',
+        },
+        {
+          slug: 'vk-takai',
+          sourceJa: '高い (たかい)',
+          reading: 'takai',
+          vi: 'Cao / Đắt',
+          en: 'Tall / Expensive',
+          noteVi: 'このくつはたかいです - Đôi giày này đắt.',
+          noteEn: 'このくつはたかいです - These shoes are expensive.',
+        },
+        {
+          slug: 'vk-yasui',
+          sourceJa: '安い (やすい)',
+          reading: 'yasui',
+          vi: 'Rẻ',
+          en: 'Cheap / Inexpensive',
+          noteVi: 'このみせはやすいです - Cửa hàng này rẻ.',
+          noteEn: 'このみせはやすいです - This shop is cheap.',
+        },
       ],
     },
   ];
@@ -1362,8 +1994,10 @@ async function main() {
       titleVi: 'Bài 1: Cấu trúc cơ bản với です (Khẳng định, phủ định, nghi vấn)',
       titleEn: 'Lesson 1: Basic sentence patterns with desu',
       titleJa: '第1課：ですの基本形（肯定、否定、疑問）',
-      descriptionVi: 'Học cách thiết lập câu khẳng định, phủ định và câu hỏi cơ bản trong tiếng Nhật.',
-      descriptionEn: 'Learn how to form basic positive, negative, and question sentences in Japanese.',
+      descriptionVi:
+        'Học cách thiết lập câu khẳng định, phủ định và câu hỏi cơ bản trong tiếng Nhật.',
+      descriptionEn:
+        'Learn how to form basic positive, negative, and question sentences in Japanese.',
       descriptionJa: '日本語の基本的な肯定・否定・疑問文의 作り方を学びます。',
       order: 41,
       items: [
@@ -1373,8 +2007,10 @@ async function main() {
           reading: 'N1 wa N2 desu',
           vi: 'N1 là N2',
           en: 'N1 is N2',
-          noteVi: 'Dùng để biểu thị phán đoán, khẳng định về chủ đề N1.\n- "は" (phát âm là "wa") là trợ từ chủ ngữ.\n- "です" đứng cuối câu thể hiện sự lịch sự.\n\nVí dụ:\n1. わたしはがくせいです。 (Tôi là học sinh.)\n2. ミラーさんはアメリカじんです。 (Anh Miller là người Mỹ.)',
-          noteEn: 'Used to state a fact or judgment about the subject N1.\n- "は" (pronounced "wa") is the topic marker.\n- "です" goes at the end to show politeness.\n\nExamples:\n1. わたしはがくせいです。 (I am a student.)\n2. ミラーさんはアメリカじんです。 (Mr. Miller is American.)'
+          noteVi:
+            'Dùng để biểu thị phán đoán, khẳng định về chủ đề N1.\n- "は" (phát âm là "wa") là trợ từ chủ ngữ.\n- "です" đứng cuối câu thể hiện sự lịch sự.\n\nVí dụ:\n1. わたしはがくせいです。 (Tôi là học sinh.)\n2. ミラーさんはアメリカじんです。 (Anh Miller là người Mỹ.)',
+          noteEn:
+            'Used to state a fact or judgment about the subject N1.\n- "は" (pronounced "wa") is the topic marker.\n- "です" goes at the end to show politeness.\n\nExamples:\n1. わたしはがくせいです。 (I am a student.)\n2. ミラーさんはアメリカじんです。 (Mr. Miller is American.)',
         },
         {
           slug: 'gr-desu-negative',
@@ -1382,8 +2018,10 @@ async function main() {
           reading: 'N1 wa N2 ja arimasen',
           vi: 'N1 không phải là N2',
           en: 'N1 is not N2',
-          noteVi: 'Là dạng phủ định của "です". Trong văn viết trang trọng, có thể dùng "ではありません" (de wa arimasen).\n\nVí dụ:\n1. わたしはせんせいじゃありません。 (Tôi không phải là giáo viên.)\n2. サントスさんはがくせいじゃありません。 (Anh Santos không phải là học sinh.)',
-          noteEn: 'The negative form of "です". In formal writing, "ではありません" (de wa arimasen) is used.\n\nExamples:\n1. わたしはせんせいじゃありません。 (I am not a teacher.)\n2. サントスさんはがくせいじゃありません。 (Mr. Santos is not a student.)'
+          noteVi:
+            'Là dạng phủ định của "です". Trong văn viết trang trọng, có thể dùng "ではありません" (de wa arimasen).\n\nVí dụ:\n1. わたしはせんせいじゃありません。 (Tôi không phải là giáo viên.)\n2. サントスさんはがくせいじゃありません。 (Anh Santos không phải là học sinh.)',
+          noteEn:
+            'The negative form of "です". In formal writing, "ではありません" (de wa arimasen) is used.\n\nExamples:\n1. わたしはせんせいじゃありません。 (I am not a teacher.)\n2. サントスさんはがくせいじゃありません。 (Mr. Santos is not a student.)',
         },
         {
           slug: 'gr-desu-question',
@@ -1391,18 +2029,22 @@ async function main() {
           reading: 'N1 wa N2 desuka',
           vi: 'N1 là N2 phải không?',
           en: 'Is N1 N2?',
-          noteVi: 'Trợ từ "か" đặt ở cuối câu để tạo câu hỏi. Giọng đọc hơi cao ở cuối câu.\n\nVí dụ:\n1. あなたはがくseiteですか。 (Bạn là học sinh phải không?)\n   -> はい、わたしはがくせいです。 (Vâng, tôi là học sinh.)\n2. ミラーさんはせんせいですか。 (Anh Miller là giáo viên phải không?)\n   -> いいえ、せんせいじゃありません。 (Không, không phải giáo viên.)',
-          noteEn: 'The particle "か" is placed at the end of the sentence to form a question. Intonation rises at the end.\n\nExamples:\n1. あなたはがくせいですか。 (Are you a student?)\n   -> はい、わたしはがくせいです。 (Yes, I am a student.)\n2. ミラーさんはせんせいですか。 (Is Mr. Miller a teacher?)\n   -> いいえ、せんせいじゃありません。 (No, he is not a teacher.)'
-        }
-      ]
+          noteVi:
+            'Trợ từ "か" đặt ở cuối câu để tạo câu hỏi. Giọng đọc hơi cao ở cuối câu.\n\nVí dụ:\n1. あなたはがくseiteですか。 (Bạn là học sinh phải không?)\n   -> はい、わたしはがくせいです。 (Vâng, tôi là học sinh.)\n2. ミラーさんはせんせいですか。 (Anh Miller là giáo viên phải không?)\n   -> いいえ、せんせいじゃありません。 (Không, không phải giáo viên.)',
+          noteEn:
+            'The particle "か" is placed at the end of the sentence to form a question. Intonation rises at the end.\n\nExamples:\n1. あなたはがくせいですか。 (Are you a student?)\n   -> はい、わたしはがくせいです。 (Yes, I am a student.)\n2. ミラーさんはせんせいですか。 (Is Mr. Miller a teacher?)\n   -> いいえ、せんせいじゃありません。 (No, he is not a teacher.)',
+        },
+      ],
     },
     {
       slug: 'grammar-particles',
       titleVi: 'Bài 2: Các trợ từ cơ bản (は, の, も)',
       titleEn: 'Lesson 2: Basic Particles (wa, no, mo)',
       titleJa: '第2課：基本助詞（は、の、も）',
-      descriptionVi: 'Tìm hiểu cách sử dụng các trợ từ cơ bản để liên kết danh từ và định vị chủ đề câu.',
-      descriptionEn: 'Learn how to use basic particles to connect nouns and define sentence topics.',
+      descriptionVi:
+        'Tìm hiểu cách sử dụng các trợ từ cơ bản để liên kết danh từ và định vị chủ đề câu.',
+      descriptionEn:
+        'Learn how to use basic particles to connect nouns and define sentence topics.',
       descriptionJa: '名詞をつなぎ、文の主題を定義するための基本助詞の使い方を学びます。',
       order: 42,
       items: [
@@ -1412,17 +2054,21 @@ async function main() {
           reading: 'N1 wa',
           vi: 'N1 là (chủ đề chính của câu)',
           en: 'Speaking of N1 / Topic marker',
-          noteVi: 'Đặt sau danh từ N1 để đưa danh từ đó làm chủ đề thảo luận của câu.\n\nVí dụ:\n1. きょうはあついですね。 (Hôm nay nóng nhỉ - chủ đề là "hôm nay".)\n2. にほんごはたのしいです。 (Tiếng Nhật thì thú vị.)',
-          noteEn: 'Follows noun N1 to establish it as the topic of the sentence.\n\nExamples:\n1. きょうはあついですね。 (Today is hot, isn\'t it? - topic is "today".)\n2. にほんごはたのしいです。 (Japanese is fun.)'
+          noteVi:
+            'Đặt sau danh từ N1 để đưa danh từ đó làm chủ đề thảo luận của câu.\n\nVí dụ:\n1. きょうはあついですね。 (Hôm nay nóng nhỉ - chủ đề là "hôm nay".)\n2. にほんごはたのしいです。 (Tiếng Nhật thì thú vị.)',
+          noteEn:
+            'Follows noun N1 to establish it as the topic of the sentence.\n\nExamples:\n1. きょうはあついですね。 (Today is hot, isn\'t it? - topic is "today".)\n2. にほんごはたのしいです。 (Japanese is fun.)',
         },
         {
           slug: 'gr-particle-no',
           sourceJa: 'N1 の N2',
           reading: 'N1 no N2',
           vi: 'N2 của N1 / N2 thuộc N1',
-          en: 'N2 of N1 / N1\'s N2',
-          noteVi: 'Trợ từ "の" nối hai danh từ. N1 giải thích, bổ nghĩa hoặc sở hữu N2.\n\nVí dụ:\n1. わたしのかばんです。 (Túi xách của tôi.)\n2. にほんのくるまです。 (Xe hơi của Nhật.)\n3. さくらだいがくのせんせいです。 (Giảng viên của Đại học Sakura.)',
-          noteEn: 'The particle "の" connects two nouns. N1 modifies, specifies, or possesses N2.\n\nExamples:\n1. わたしのかばんです。 (My bag.)\n2. にほんのくるまです. (A Japanese car / car of Japan.)\n3. さくらだいがくのせんせいです。 (A teacher of Sakura University.)'
+          en: "N2 of N1 / N1's N2",
+          noteVi:
+            'Trợ từ "の" nối hai danh từ. N1 giải thích, bổ nghĩa hoặc sở hữu N2.\n\nVí dụ:\n1. わたしのかばんです。 (Túi xách của tôi.)\n2. にほんのくるまです。 (Xe hơi của Nhật.)\n3. さくらだいがくのせんせいです。 (Giảng viên của Đại học Sakura.)',
+          noteEn:
+            'The particle "の" connects two nouns. N1 modifies, specifies, or possesses N2.\n\nExamples:\n1. わたしのかばんです。 (My bag.)\n2. にほんのくるまです. (A Japanese car / car of Japan.)\n3. さくらだいがくのせんせいです。 (A teacher of Sakura University.)',
         },
         {
           slug: 'gr-particle-mo',
@@ -1430,10 +2076,12 @@ async function main() {
           reading: 'N mo',
           vi: 'N cũng',
           en: 'N also / too',
-          noteVi: 'Dùng thay cho "は" khi chủ đề tiếp theo có cùng tính chất hoặc nội dung tương tự chủ đề trước.\n\nVí dụ:\n1. わたしはがくせいです。 (Tôi là học sinh.)\n2. タワポンさんもがくせいです。 (Anh Thawaphon cũng là học sinh.)',
-          noteEn: 'Used instead of "は" when the topic has the same attribute or state as the previous topic.\n\nExamples:\n1. わたしerがくせいです。 (I am a student.)\n2. タワポンさんもがくせいです。 (Mr. Thawaphon is also a student.)'
-        }
-      ]
+          noteVi:
+            'Dùng thay cho "は" khi chủ đề tiếp theo có cùng tính chất hoặc nội dung tương tự chủ đề trước.\n\nVí dụ:\n1. わたしはがくせいです。 (Tôi là học sinh.)\n2. タワポンさんもがくせいです。 (Anh Thawaphon cũng là học sinh.)',
+          noteEn:
+            'Used instead of "は" when the topic has the same attribute or state as the previous topic.\n\nExamples:\n1. わたしerがくせいです。 (I am a student.)\n2. タワポンさんもがくせいです。 (Mr. Thawaphon is also a student.)',
+        },
+      ],
     },
     {
       slug: 'grammar-indicatives',
@@ -1451,8 +2099,10 @@ async function main() {
           reading: 'kore / sore / are',
           vi: 'Cái này / cái đó / cái kia (danh từ độc lập)',
           en: 'this one / that one / that one over there',
-          noteVi: 'Đóng vai trò là danh từ làm chủ ngữ hoặc tân ngữ.\n- これ: Vật gần người nói.\n- それ: Vật gần người nghe.\n- あれ: Vật xa cả hai người.\n\nVí dụ:\n1. これはほんです。 (Đây là cuốn sách.)\n2. それはなんですか。 (Đó là cái gì thế?)\n3. あれはわたしのかばんです。 (Kia là cái túi của tôi.)',
-          noteEn: 'Act as independent pronouns.\n- これ: Near the speaker.\n- それ: Near the listener.\n- あれ: Far from both.\n\nExamples:\n1. これはほんです。 (This is a book.)\n2. それはなんですか。 (What is that?)\n3. あれはわたしのかばんです。 (That over there is my bag.)'
+          noteVi:
+            'Đóng vai trò là danh từ làm chủ ngữ hoặc tân ngữ.\n- これ: Vật gần người nói.\n- それ: Vật gần người nghe.\n- あれ: Vật xa cả hai người.\n\nVí dụ:\n1. これはほんです。 (Đây là cuốn sách.)\n2. それはなんですか。 (Đó là cái gì thế?)\n3. あれはわたしのかばんです。 (Kia là cái túi của tôi.)',
+          noteEn:
+            'Act as independent pronouns.\n- これ: Near the speaker.\n- それ: Near the listener.\n- あれ: Far from both.\n\nExamples:\n1. これはほんです。 (This is a book.)\n2. それはなんですか。 (What is that?)\n3. あれはわたしのかばんです。 (That over there is my bag.)',
         },
         {
           slug: 'gr-indicative-kono',
@@ -1460,10 +2110,12 @@ async function main() {
           reading: 'kono N / sono N / ano N',
           vi: 'N này / N đó / N kia (bổ nghĩa danh từ)',
           en: 'this N / that N / that N over there',
-          noteVi: 'Phải đi kèm trực tiếp với danh từ đứng sau. Không đứng một mình.\n- このほん: Cuốn sách này (gần người nói).\n- そのほん: Cuốn sách đó (gần người nghe).\n- あのほん: Cuốn sách kia (xa cả hai).\n\nVí dụ:\n1. このほんはわたしのです。 (Cuốn sách này là của tôi.)\n2. そのかばんはいくらですか。 (Cái túi đó bao nhiêu tiền?)',
-          noteEn: 'Must directly modify a noun that follows. Cannot stand alone.\n- このほん: This book (near speaker).\n- そのほん: That book (near listener).\n- あのほん: That book (far from both).\n\nExamples:\n1. このほんはわたしのです。 (This book is mine.)\n2. そのかばんはいくらですか。 (How much is that bag?)'
-        }
-      ]
+          noteVi:
+            'Phải đi kèm trực tiếp với danh từ đứng sau. Không đứng một mình.\n- このほん: Cuốn sách này (gần người nói).\n- そのほん: Cuốn sách đó (gần người nghe).\n- あのほん: Cuốn sách kia (xa cả hai).\n\nVí dụ:\n1. このほんはわたしのです。 (Cuốn sách này là của tôi.)\n2. そのかばんはいくらですか。 (Cái túi đó bao nhiêu tiền?)',
+          noteEn:
+            'Must directly modify a noun that follows. Cannot stand alone.\n- このほん: This book (near speaker).\n- そのほん: That book (near listener).\n- あのほん: That book (far from both).\n\nExamples:\n1. このほんはわたしのです。 (This book is mine.)\n2. そのかばんはいくらですか。 (How much is that bag?)',
+        },
+      ],
     },
     {
       slug: 'grammar-place-particles',
@@ -1471,7 +2123,8 @@ async function main() {
       titleEn: 'Lesson 4: Location & Direction Particles (ni, he, de)',
       titleJa: '第4課：場所・移動の助詞（に、へ、で）',
       descriptionVi: 'Làm quen với cách nói điểm đến, hướng đi và nơi diễn ra hành động.',
-      descriptionEn: 'Learn to express destinations, directions, and places where activities happen.',
+      descriptionEn:
+        'Learn to express destinations, directions, and places where activities happen.',
       descriptionJa: '目的地、方向、活動が行われる場所の表し方を学びます。',
       order: 44,
       items: [
@@ -1481,8 +2134,10 @@ async function main() {
           reading: 'N(place) ni imasu/arimasu',
           vi: 'Có ở (địa điểm / vị trí)',
           en: 'Exist at (place)',
-          noteVi: 'Trợ từ "に" chỉ sự tồn tại của người/vật tại một vị trí.\n- います: Dùng cho người/động vật.\n- あります: Dùng cho đồ vật/sự vật.\n\nVí dụ:\n1. へやにねこがいます。 (Có con mèo ở trong phòng.)\n2. つくえのうえにほんがあります。 (Có cuốn sách ở trên bàn.)',
-          noteEn: 'The particle "ni" marks existence of objects/people at a location.\n- います: For living beings.\n- あります: For inanimate objects.\n\nExamples:\n1. へやにねこがいます。 (There is a cat in the room.)\n2. つくえのうえにほんがあります。 (There is a book on the desk.)'
+          noteVi:
+            'Trợ từ "に" chỉ sự tồn tại của người/vật tại một vị trí.\n- います: Dùng cho người/động vật.\n- あります: Dùng cho đồ vật/sự vật.\n\nVí dụ:\n1. へやにねこがいます。 (Có con mèo ở trong phòng.)\n2. つくえのうえにほんがあります。 (Có cuốn sách ở trên bàn.)',
+          noteEn:
+            'The particle "ni" marks existence of objects/people at a location.\n- います: For living beings.\n- あります: For inanimate objects.\n\nExamples:\n1. へやにねこがいます。 (There is a cat in the room.)\n2. つくえのうえにほんがあります。 (There is a book on the desk.)',
         },
         {
           slug: 'gr-particle-he',
@@ -1490,8 +2145,10 @@ async function main() {
           reading: 'N(place) he ikimasu / kimasu',
           vi: 'Đi đến / Đến (địa điểm)',
           en: 'Go to / Come to (place)',
-          noteVi: 'Trợ từ "へ" (phát âm là "e") chỉ hướng di chuyển đến địa điểm.\n\nVí dụ:\n1. わたしはきょうとへいきます。 (Tôi đi Kyoto.)\n2. とomdachiがうちへきます。 (Bạn tôi đến nhà tôi.)',
-          noteEn: 'The particle "へ" (pronounced "e") indicates direction toward a destination.\n\nExamples:\n1. わたしはきょうtoへいきます。 (I will go to Kyoto.)\n2. ともだちがうちへきます。 (My friend will come to my house.)'
+          noteVi:
+            'Trợ từ "へ" (phát âm là "e") chỉ hướng di chuyển đến địa điểm.\n\nVí dụ:\n1. わたしはきょうとへいきます。 (Tôi đi Kyoto.)\n2. とomdachiがうちへきます。 (Bạn tôi đến nhà tôi.)',
+          noteEn:
+            'The particle "へ" (pronounced "e") indicates direction toward a destination.\n\nExamples:\n1. わたしはきょうtoへいきます。 (I will go to Kyoto.)\n2. ともだちがうちへきます。 (My friend will come to my house.)',
         },
         {
           slug: 'gr-particle-de',
@@ -1499,10 +2156,12 @@ async function main() {
           reading: 'N(place) de V',
           vi: 'Hành động V diễn ra tại N',
           en: 'Do action V at place N',
-          noteVi: 'Trợ từ "de" chỉ địa điểm xảy ra một hành động hoặc sự việc cụ thể.\n\nVí dụ:\n1. えきでほんをかいました。 (Tôi đã mua sách ở ga tàu.)\n2. レストランでごはんをたべます。 (Tôi ăn cơm ở nhà hàng.)',
-          noteEn: 'The particle "de" marks the place where an action occurs.\n\nExamples:\n1. えきでほんをかいました。 (I bought a book at the station.)\n2. レストランでごはんをたべます。 (I eat at a restaurant.)'
-        }
-      ]
+          noteVi:
+            'Trợ từ "de" chỉ địa điểm xảy ra một hành động hoặc sự việc cụ thể.\n\nVí dụ:\n1. えきでほんをかいました。 (Tôi đã mua sách ở ga tàu.)\n2. レストランでごはんをたべます。 (Tôi ăn cơm ở nhà hàng.)',
+          noteEn:
+            'The particle "de" marks the place where an action occurs.\n\nExamples:\n1. えきでほんをかいました。 (I bought a book at the station.)\n2. レストランでごはんをたべます。 (I eat at a restaurant.)',
+        },
+      ],
     },
     {
       slug: 'grammar-requests',
@@ -1510,7 +2169,8 @@ async function main() {
       titleEn: 'Lesson 5: Polite Requests with ~te kudasai',
       titleJa: '第5課：〜てください（丁寧な依頼）',
       descriptionVi: 'Học cách chuyển đổi động từ sang thể て và nhờ vả, yêu cầu ai đó làm gì.',
-      descriptionEn: 'Learn to conjugate verbs to te-form and politely ask/request someone to do something.',
+      descriptionEn:
+        'Learn to conjugate verbs to te-form and politely ask/request someone to do something.',
       descriptionJa: '動詞をて形に変え、誰かに何かを丁寧に依頼・要求する方法を学びます。',
       order: 45,
       items: [
@@ -1520,11 +2180,13 @@ async function main() {
           reading: 'V-te kudasai',
           vi: 'Hãy làm V (yêu cầu lịch sự)',
           en: 'Please do V',
-          noteVi: 'Dùng để nhờ vả, khuyên bảo hoặc yêu cầu người nghe thực hiện một hành động.\n\nVí dụ:\n1. ちょっとまってください。 (Xin hãy chờ một chút.)\n2. ここに名前をかいてください。 (Xin hãy viết tên vào đây.)\n3. ほんをよんでください。 (Hãy đọc sách.)',
-          noteEn: 'Used to ask, advise, or request the listener to perform an action.\n\nExamples:\n1. ちょっとまってください。 (Please wait a moment.)\n2. ここに名前をかいてください。 (Please write your name here.)\n3. ほんをよんでください。 (Please read the book.)'
-        }
-      ]
-    }
+          noteVi:
+            'Dùng để nhờ vả, khuyên bảo hoặc yêu cầu người nghe thực hiện một hành động.\n\nVí dụ:\n1. ちょっとまってください。 (Xin hãy chờ một chút.)\n2. ここに名前をかいてください。 (Xin hãy viết tên vào đây.)\n3. ほんをよんでください。 (Hãy đọc sách.)',
+          noteEn:
+            'Used to ask, advise, or request the listener to perform an action.\n\nExamples:\n1. ちょっとまってください。 (Please wait a moment.)\n2. ここに名前をかいてください。 (Please write your name here.)\n3. ほんをよんでください。 (Please read the book.)',
+        },
+      ],
+    },
   ];
 
   for (const lesson of grammarLessons) {
@@ -1574,16 +2236,116 @@ async function main() {
       descriptionJa: '1から10までの数字の漢字の読み方と書き方を学びます。',
       order: 61,
       items: [
-        { slug: 'kj-ichi', sourceJa: '一', reading: 'Kun: ひと | On: イチ', vi: 'Nhất (Một / 1)', en: 'One (1)', noteVi: 'Số nét: 1\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 一つ (ひとつ) - Một cái\n- 一人 (ひとり) - Một người\n- 一月 (いちがつ) - Tháng 1', noteEn: 'Strokes: 1\nRadical: 一 (One)\nExamples:\n- 一つ (ひとつ) - One (thing)\n- 一人 (ひとり) - One person\n- 一月 (いちがつ) - January' },
-        { slug: 'kj-ni', sourceJa: '二', reading: 'Kun: ふた | On: ニ', vi: 'Nhị (Hai / 2)', en: 'Two (2)', noteVi: 'Số nét: 2\nBộ thủ: 二 (Nhị)\nVí dụ:\n- 二つ (ふたつ) - Hai cái\n- 二人 (ふたり) - Hai người\n- 二月 (にがつ) - Tháng 2', noteEn: 'Strokes: 2\nRadical: 二 (Two)\nExamples:\n- 二つ (ふたつ) - Two (things)\n- 二人 (ふたり) - Two people\n- 二月 (にがつ) - February' },
-        { slug: 'kj-san', sourceJa: '三', reading: 'Kun: み | On: サン', vi: 'Tam (Ba / 3)', en: 'Three (3)', noteVi: 'Số nét: 3\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 三つ (みっつ) - Ba cái\n- 三人 (さんにん) - Ba người\n- 三月 (さんがつ) - Tháng 3', noteEn: 'Strokes: 3\nRadical: 一 (One)\nExamples:\n- 三つ (みっつ) - Three (things)\n- 三人 (さんにん) - Three people\n- 三月 (さんがつ) - March' },
-        { slug: 'kj-yon', sourceJa: '四', reading: 'Kun: よ, よん, み | On: シ', vi: 'Tứ (Bốn / 4)', en: 'Four (4)', noteVi: 'Số nét: 5\nBộ thủ: 囗 (Vi)\nVí dụ:\n- 四つ (よっつ) - Bốn cái\n- 四人 (よにん) - Bốn người\n- 四月 (しがつ) - Tháng 4', noteEn: 'Strokes: 5\nRadical: 囗 (Box)\nExamples:\n- 四つ (よっつ) - Four (things)\n- 四人 (よにん) - Four people\n- 四月 (しがつ) - April' },
-        { slug: 'kj-go', sourceJa: '五', reading: 'Kun: いつ | On: ゴ', vi: 'Ngũ (Năm / 5)', en: 'Five (5)', noteVi: 'Số nét: 4\nBộ thủ: 二 (Nhị)\nVí dụ:\n- 五つ (いつつ) - Năm cái\n- 五人 (ごにん) - Năm người\n- 五月 (ごがつ) - Tháng 5', noteEn: 'Strokes: 4\nRadical: 二 (Two)\nExamples:\n- 五つ (いつつ) - Five (things)\n- 五人 (ごにん) - Five people\n- 五月 (ごがつ) - May' },
-        { slug: 'kj-roku', sourceJa: '六', reading: 'Kun: む | On: ロク', vi: 'Lục (Sáu / 6)', en: 'Six (6)', noteVi: 'Số nét: 4\nBộ thủ: 八 (Bát)\nVí dụ:\n- 六つ (むっつ) - Sáu cái\n- 六人 (ろくにん) - Sáu người\n- 六月 (ろくがつ) - Tháng 6', noteEn: 'Strokes: 4\nRadical: 八 (Eight)\nExamples:\n- 六つ (むっつ) - Six (things)\n- 六人 (ろくにん) - Six people\n- 六月 (ろくがつ) - June' },
-        { slug: 'kj-nana', sourceJa: '七', reading: 'Kun: なな | On: シチ', vi: 'Thất (Bảy / 7)', en: 'Seven (7)', noteVi: 'Số nét: 2\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 七つ (ななつ) - Bảy cái\n- 七人 (しちにん / ななにん) - Bảy người\n- 七月 (しちがつ) - Tháng 7', noteEn: 'Strokes: 2\nRadical: 一 (One)\nExamples:\n- 七つ (ななつ) - Seven (things)\n- 七人 (しちにん) - Seven people\n- 七月 (しちがつ) - July' },
-        { slug: 'kj-hachi', sourceJa: '八', reading: 'Kun: よう | On: ハチ', vi: 'Bát (Tám / 8)', en: 'Eight (8)', noteVi: 'Số nét: 2\nBộ thủ: 八 (Bát)\nVí dụ:\n- 八つ (やっつ) - Tám cái\n- 八人 (はちにん) - Tám người\n- 八月 (はちがつ) - Tháng 8', noteEn: 'Strokes: 2\nRadical: 八 (Eight)\nExamples:\n- 八つ (やっつ) - Eight (things)\n- 八人 (はちにん) - Eight people\n- 八月 (はちがつ) - August' },
-        { slug: 'kj-kyuu', sourceJa: '九', reading: 'Kun: ここの | On: キュウ, ク', vi: 'Cửu (Chín / 9)', en: 'Nine (9)', noteVi: 'Số nét: 2\nBộ thủ: 乙 (Ất)\nVí dụ:\n- 九つ (ここのつ) - Chín cái\n- 九人 (きゅうにん) - Chín người\n- 九月 (くがつ) - Tháng 9', noteEn: 'Strokes: 2\nRadical: 乙 (Second)\nExamples:\n- 九つ (ここのつ) - Nine (things)\n- 九人 (きゅうにん) - Nine people\n- 九月 (くがつ) - September' },
-        { slug: 'kj-juu', sourceJa: '十', reading: 'Kun: とお | On: ジュウ', vi: 'Thập (Mười / 10)', en: 'Ten (10)', noteVi: 'Số nét: 2\nBộ thủ: 十 (Thập)\nVí dụ:\n- 十 (とお) - Mười cái\n- 十人 (じゅうにん) - Mười người\n- 十月 (じゅうがつ) - Tháng 10', noteEn: 'Strokes: 2\nRadical: 十 (Ten)\nExamples:\n- 十 (とお) - Ten (things)\n- 十人 (じゅうにん) - Ten people\n- 十月 (じゅうがつ) - October' },
+        {
+          slug: 'kj-ichi',
+          sourceJa: '一',
+          reading: 'Kun: ひと | On: イチ',
+          vi: 'Nhất (Một / 1)',
+          en: 'One (1)',
+          noteVi:
+            'Số nét: 1\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 一つ (ひとつ) - Một cái\n- 一人 (ひとり) - Một người\n- 一月 (いちがつ) - Tháng 1',
+          noteEn:
+            'Strokes: 1\nRadical: 一 (One)\nExamples:\n- 一つ (ひとつ) - One (thing)\n- 一人 (ひとり) - One person\n- 一月 (いちがつ) - January',
+        },
+        {
+          slug: 'kj-ni',
+          sourceJa: '二',
+          reading: 'Kun: ふた | On: ニ',
+          vi: 'Nhị (Hai / 2)',
+          en: 'Two (2)',
+          noteVi:
+            'Số nét: 2\nBộ thủ: 二 (Nhị)\nVí dụ:\n- 二つ (ふたつ) - Hai cái\n- 二人 (ふたり) - Hai người\n- 二月 (にがつ) - Tháng 2',
+          noteEn:
+            'Strokes: 2\nRadical: 二 (Two)\nExamples:\n- 二つ (ふたつ) - Two (things)\n- 二人 (ふたり) - Two people\n- 二月 (にがつ) - February',
+        },
+        {
+          slug: 'kj-san',
+          sourceJa: '三',
+          reading: 'Kun: み | On: サン',
+          vi: 'Tam (Ba / 3)',
+          en: 'Three (3)',
+          noteVi:
+            'Số nét: 3\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 三つ (みっつ) - Ba cái\n- 三人 (さんにん) - Ba người\n- 三月 (さんがつ) - Tháng 3',
+          noteEn:
+            'Strokes: 3\nRadical: 一 (One)\nExamples:\n- 三つ (みっつ) - Three (things)\n- 三人 (さんにん) - Three people\n- 三月 (さんがつ) - March',
+        },
+        {
+          slug: 'kj-yon',
+          sourceJa: '四',
+          reading: 'Kun: よ, よん, み | On: シ',
+          vi: 'Tứ (Bốn / 4)',
+          en: 'Four (4)',
+          noteVi:
+            'Số nét: 5\nBộ thủ: 囗 (Vi)\nVí dụ:\n- 四つ (よっつ) - Bốn cái\n- 四人 (よにん) - Bốn người\n- 四月 (しがつ) - Tháng 4',
+          noteEn:
+            'Strokes: 5\nRadical: 囗 (Box)\nExamples:\n- 四つ (よっつ) - Four (things)\n- 四人 (よにん) - Four people\n- 四月 (しがつ) - April',
+        },
+        {
+          slug: 'kj-go',
+          sourceJa: '五',
+          reading: 'Kun: いつ | On: ゴ',
+          vi: 'Ngũ (Năm / 5)',
+          en: 'Five (5)',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 二 (Nhị)\nVí dụ:\n- 五つ (いつつ) - Năm cái\n- 五人 (ごにん) - Năm người\n- 五月 (ごがつ) - Tháng 5',
+          noteEn:
+            'Strokes: 4\nRadical: 二 (Two)\nExamples:\n- 五つ (いつつ) - Five (things)\n- 五人 (ごにん) - Five people\n- 五月 (ごがつ) - May',
+        },
+        {
+          slug: 'kj-roku',
+          sourceJa: '六',
+          reading: 'Kun: む | On: ロク',
+          vi: 'Lục (Sáu / 6)',
+          en: 'Six (6)',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 八 (Bát)\nVí dụ:\n- 六つ (むっつ) - Sáu cái\n- 六人 (ろくにん) - Sáu người\n- 六月 (ろくがつ) - Tháng 6',
+          noteEn:
+            'Strokes: 4\nRadical: 八 (Eight)\nExamples:\n- 六つ (むっつ) - Six (things)\n- 六人 (ろくにん) - Six people\n- 六月 (ろくがつ) - June',
+        },
+        {
+          slug: 'kj-nana',
+          sourceJa: '七',
+          reading: 'Kun: なな | On: シチ',
+          vi: 'Thất (Bảy / 7)',
+          en: 'Seven (7)',
+          noteVi:
+            'Số nét: 2\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 七つ (ななつ) - Bảy cái\n- 七人 (しちにん / ななにん) - Bảy người\n- 七月 (しちがつ) - Tháng 7',
+          noteEn:
+            'Strokes: 2\nRadical: 一 (One)\nExamples:\n- 七つ (ななつ) - Seven (things)\n- 七人 (しちにん) - Seven people\n- 七月 (しちがつ) - July',
+        },
+        {
+          slug: 'kj-hachi',
+          sourceJa: '八',
+          reading: 'Kun: よう | On: ハチ',
+          vi: 'Bát (Tám / 8)',
+          en: 'Eight (8)',
+          noteVi:
+            'Số nét: 2\nBộ thủ: 八 (Bát)\nVí dụ:\n- 八つ (やっつ) - Tám cái\n- 八人 (はちにん) - Tám người\n- 八月 (はちがつ) - Tháng 8',
+          noteEn:
+            'Strokes: 2\nRadical: 八 (Eight)\nExamples:\n- 八つ (やっつ) - Eight (things)\n- 八人 (はちにん) - Eight people\n- 八月 (はちがつ) - August',
+        },
+        {
+          slug: 'kj-kyuu',
+          sourceJa: '九',
+          reading: 'Kun: ここの | On: キュウ, ク',
+          vi: 'Cửu (Chín / 9)',
+          en: 'Nine (9)',
+          noteVi:
+            'Số nét: 2\nBộ thủ: 乙 (Ất)\nVí dụ:\n- 九つ (ここのつ) - Chín cái\n- 九人 (きゅうにん) - Chín người\n- 九月 (くがつ) - Tháng 9',
+          noteEn:
+            'Strokes: 2\nRadical: 乙 (Second)\nExamples:\n- 九つ (ここのつ) - Nine (things)\n- 九人 (きゅうにん) - Nine people\n- 九月 (くがつ) - September',
+        },
+        {
+          slug: 'kj-juu',
+          sourceJa: '十',
+          reading: 'Kun: とお | On: ジュウ',
+          vi: 'Thập (Mười / 10)',
+          en: 'Ten (10)',
+          noteVi:
+            'Số nét: 2\nBộ thủ: 十 (Thập)\nVí dụ:\n- 十 (とお) - Mười cái\n- 十人 (じゅうにん) - Mười người\n- 十月 (じゅうがつ) - Tháng 10',
+          noteEn:
+            'Strokes: 2\nRadical: 十 (Ten)\nExamples:\n- 十 (とお) - Ten (things)\n- 十人 (じゅうにん) - Ten people\n- 十月 (じゅうがつ) - October',
+        },
       ],
     },
     {
@@ -1596,13 +2358,83 @@ async function main() {
       descriptionJa: '自然界や曜日を表す漢字を学びます。',
       order: 62,
       items: [
-        { slug: 'kj-hi', sourceJa: '日', reading: 'Kun: ひ, び, か | On: ニチ, ジツ', vi: 'Nhật (Ngày / Mặt trời)', en: 'Day / Sun', noteVi: 'Số nét: 4\nBộ thủ: 日 (Nhật)\nVí dụ:\n- 日本 (にほん) - Nhật Bản\n- 日曜日 (にちようび) - Chủ Nhật\n- 毎日 (まいにち) - Mỗi ngày', noteEn: 'Strokes: 4\nRadical: 日 (Sun)\nExamples:\n- 日本 (にほん) - Japan\n- 日曜日 (にちようび) - Sunday\n- 毎日 (まいにち) - Every day' },
-        { slug: 'kj-tsuki', sourceJa: '月', reading: 'Kun: つき | On: ゲツ, ガツ', vi: 'Nguyệt (Tháng / Mặt trăng)', en: 'Month / Moon', noteVi: 'Số nét: 4\nBộ thủ: 月 (Nguyệt)\nVí dụ:\n- 月曜日 (げつようび) - Thứ Hai\n- 今月 (こんげつ) - Tháng này\n- 三月 (さんがつ) - Tháng 3', noteEn: 'Strokes: 4\nRadical: 月 (Moon)\nExamples:\n- 月曜日 (げつようび) - Monday\n- 今月 (こんげつ) - This month\n- 三月 (さんがつ) - March' },
-        { slug: 'kj-ka', sourceJa: '火', reading: 'Kun: ひ | On: カ', vi: 'Hỏa (Lửa)', en: 'Fire', noteVi: 'Số nét: 4\nBộ thủ: 火 (Hỏa)\nVí dụ:\n- 火曜日 (かようび) - Thứ Ba\n- 火山 (かざん) - Núi lửa\n- 火事 (かじ) - Hỏa hoạn', noteEn: 'Strokes: 4\nRadical: 火 (Fire)\nExamples:\n- 火曜日 (かようび) - Tuesday\n- 火山 (かざん) - Volcano\n- 火事 (かじ) - Fire (accidental)' },
-        { slug: 'kj-mizu', sourceJa: '水', reading: 'Kun: みず | On: スイ', vi: 'Thủy (Nước)', en: 'Water', noteVi: 'Số nét: 4\nBộ thủ: 水 (Thủy)\nVí dụ:\n- 水曜日 (すいようび) - Thứ Tư\n- お水 (おみず) - Nước uống\n- 水道 (すいどう) - Nước máy', noteEn: 'Strokes: 4\nRadical: 水 (Water)\nExamples:\n- 水曜日 (すいようび) - Wednesday\n- お水 (おみず) - Water (drink)\n- 水道 (すいどう) - Water supply' },
-        { slug: 'kj-ki', sourceJa: '木', reading: 'Kun: き | On: モク, ボク', vi: 'Mộc (Cây)', en: 'Tree / Wood', noteVi: 'Số nét: 4\nBộ thủ: 木 (Mộc)\nVí dụ:\n- 木曜日 (もくようび) - Thứ Năm\n- 大木 (たいぼく) - Cây lớn\n- 木の下 (きのした) - Dưới bóng cây', noteEn: 'Strokes: 4\nRadical: 木 (Tree)\nExamples:\n- 木曜日 (もくようび) - Thursday\n- 大木 (たいぼく) - Large tree\n- 木の下 (きのした) - Under the tree' },
-        { slug: 'kj-kane', sourceJa: '金', reading: 'Kun: かね | On: キン', vi: 'Kim (Vàng / Tiền)', en: 'Gold / Money', noteVi: 'Số nét: 8\nBộ thủ: 金 (Kim)\nVí dụ:\n- 金曜日 (きんようび) - Thứ Sáu\n- お金 (おかね) - Tiền\n- 金メダル (きんめだる) - Huy chương vàng', noteEn: 'Strokes: 8\nRadical: 金 (Gold)\nExamples:\n- 金曜日 (きんようび) - Friday\n- お金 (おかね) - Money\n- 金メダル (きんめだる) - Gold medal' },
-        { slug: 'kj-tsuchi', sourceJa: '土', reading: 'Kun: つち | On: ド, ト', vi: 'Thổ (Đất)', en: 'Earth / Soil', noteVi: 'Số nét: 3\nBộ thủ: 土 (Thổ)\nVí dụ:\n- 土曜日 (どようび) - Thứ Bảy\n- 土地 (とち) - Đất đai\n- 土星 (どせい) - Sao Thổ', noteEn: 'Strokes: 3\nRadical: 土 (Earth)\nExamples:\n- 土曜日 (どようび) - Saturday\n- 土地 (とち) - Land / Plot\n- 土星 (どせい) - Saturn' },
+        {
+          slug: 'kj-hi',
+          sourceJa: '日',
+          reading: 'Kun: ひ, び, か | On: ニチ, ジツ',
+          vi: 'Nhật (Ngày / Mặt trời)',
+          en: 'Day / Sun',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 日 (Nhật)\nVí dụ:\n- 日本 (にほん) - Nhật Bản\n- 日曜日 (にちようび) - Chủ Nhật\n- 毎日 (まいにち) - Mỗi ngày',
+          noteEn:
+            'Strokes: 4\nRadical: 日 (Sun)\nExamples:\n- 日本 (にほん) - Japan\n- 日曜日 (にちようび) - Sunday\n- 毎日 (まいにち) - Every day',
+        },
+        {
+          slug: 'kj-tsuki',
+          sourceJa: '月',
+          reading: 'Kun: つき | On: ゲツ, ガツ',
+          vi: 'Nguyệt (Tháng / Mặt trăng)',
+          en: 'Month / Moon',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 月 (Nguyệt)\nVí dụ:\n- 月曜日 (げつようび) - Thứ Hai\n- 今月 (こんげつ) - Tháng này\n- 三月 (さんがつ) - Tháng 3',
+          noteEn:
+            'Strokes: 4\nRadical: 月 (Moon)\nExamples:\n- 月曜日 (げつようび) - Monday\n- 今月 (こんげつ) - This month\n- 三月 (さんがつ) - March',
+        },
+        {
+          slug: 'kj-ka',
+          sourceJa: '火',
+          reading: 'Kun: ひ | On: カ',
+          vi: 'Hỏa (Lửa)',
+          en: 'Fire',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 火 (Hỏa)\nVí dụ:\n- 火曜日 (かようび) - Thứ Ba\n- 火山 (かざん) - Núi lửa\n- 火事 (かじ) - Hỏa hoạn',
+          noteEn:
+            'Strokes: 4\nRadical: 火 (Fire)\nExamples:\n- 火曜日 (かようび) - Tuesday\n- 火山 (かざん) - Volcano\n- 火事 (かじ) - Fire (accidental)',
+        },
+        {
+          slug: 'kj-mizu',
+          sourceJa: '水',
+          reading: 'Kun: みず | On: スイ',
+          vi: 'Thủy (Nước)',
+          en: 'Water',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 水 (Thủy)\nVí dụ:\n- 水曜日 (すいようび) - Thứ Tư\n- お水 (おみず) - Nước uống\n- 水道 (すいどう) - Nước máy',
+          noteEn:
+            'Strokes: 4\nRadical: 水 (Water)\nExamples:\n- 水曜日 (すいようび) - Wednesday\n- お水 (おみず) - Water (drink)\n- 水道 (すいどう) - Water supply',
+        },
+        {
+          slug: 'kj-ki',
+          sourceJa: '木',
+          reading: 'Kun: き | On: モク, ボク',
+          vi: 'Mộc (Cây)',
+          en: 'Tree / Wood',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 木 (Mộc)\nVí dụ:\n- 木曜日 (もくようび) - Thứ Năm\n- 大木 (たいぼく) - Cây lớn\n- 木の下 (きのした) - Dưới bóng cây',
+          noteEn:
+            'Strokes: 4\nRadical: 木 (Tree)\nExamples:\n- 木曜日 (もくようび) - Thursday\n- 大木 (たいぼく) - Large tree\n- 木の下 (きのした) - Under the tree',
+        },
+        {
+          slug: 'kj-kane',
+          sourceJa: '金',
+          reading: 'Kun: かね | On: キン',
+          vi: 'Kim (Vàng / Tiền)',
+          en: 'Gold / Money',
+          noteVi:
+            'Số nét: 8\nBộ thủ: 金 (Kim)\nVí dụ:\n- 金曜日 (きんようび) - Thứ Sáu\n- お金 (おかね) - Tiền\n- 金メダル (きんめだる) - Huy chương vàng',
+          noteEn:
+            'Strokes: 8\nRadical: 金 (Gold)\nExamples:\n- 金曜日 (きんようび) - Friday\n- お金 (おかね) - Money\n- 金メダル (きんめだる) - Gold medal',
+        },
+        {
+          slug: 'kj-tsuchi',
+          sourceJa: '土',
+          reading: 'Kun: つち | On: ド, ト',
+          vi: 'Thổ (Đất)',
+          en: 'Earth / Soil',
+          noteVi:
+            'Số nét: 3\nBộ thủ: 土 (Thổ)\nVí dụ:\n- 土曜日 (どようび) - Thứ Bảy\n- 土地 (とち) - Đất đai\n- 土星 (どせい) - Sao Thổ',
+          noteEn:
+            'Strokes: 3\nRadical: 土 (Earth)\nExamples:\n- 土曜日 (どようび) - Saturday\n- 土地 (とち) - Land / Plot\n- 土星 (どせい) - Saturn',
+        },
       ],
     },
     {
@@ -1615,12 +2447,72 @@ async function main() {
       descriptionJa: '位置や方向を表す漢字を学びます。',
       order: 63,
       items: [
-        { slug: 'kj-ue', sourceJa: '上', reading: 'Kun: うえ, あ.げる | On: ジョウ', vi: 'Thượng (Trên / Lên)', en: 'Up / Above', noteVi: 'Số nét: 3\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 机の上 (つくえのうえ) - Trên bàn\n- 上手 (じょうず) - Giỏi\n- 上げる (あげる) - Nâng lên', noteEn: 'Strokes: 3\nRadical: 一 (One)\nExamples:\n- 机の上 (つくえのうえ) - On the desk\n- 上手 (じょうず) - Skillful / Good at\n- 上げる (あげる) - To raise' },
-        { slug: 'kj-shita', sourceJa: '下', reading: 'Kun: した, さ.げる | On: カ, ゲ', vi: 'Hạ (Dưới / Xuống)', en: 'Down / Below', noteVi: 'Số nét: 3\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 椅子の下 (いすのした) - Dưới ghế\n- 下手 (へた) - Dở, kém\n- 下げる (さげる) - Hạ xuống', noteEn: 'Strokes: 3\nRadical: 一 (One)\nExamples:\n- 椅子の下 (いすのした) - Under the chair\n- 下手 (へた) - Unskillful / Bad at\n- 下げる (さげる) - To lower' },
-        { slug: 'kj-hidari', sourceJa: '左', reading: 'Kun: ひだり | On: サ', vi: 'Tả (Bên trái)', en: 'Left', noteVi: 'Số nét: 5\nBộ thủ: 工 (Công)\nVí dụ:\n- 左手 (ひだりて) - Tay trái\n- 左折 (させつ) - Rẽ trái\n- 左側 (ひだりがわ) - Phía bên trái', noteEn: 'Strokes: 5\nRadical: 工 (Work)\nExamples:\n- 左手 (ひだりて) - Left hand\n- 左折 (させつ) - Left turn\n- 左側 (ひだりがわ) - Left side' },
-        { slug: 'kj-migi', sourceJa: '右', reading: 'Kun: みぎ | On: ウ, ユウ', vi: 'Hữu (Bên phải)', en: 'Right', noteVi: 'Số nét: 5\nBộ thủ: 口 (Khẩu)\nVí dụ:\n- 右手 (みぎて) - Tay phải\n- 右折 (うせつ) - Rẽ phải\n- 右側 (みぎがわ) - Phía bên phải', noteEn: 'Strokes: 5\nRadical: 口 (Mouth)\nExamples:\n- 右手 (みぎて) - Right hand\n- 右折 (うせつ) - Right turn\n- 右側 (みぎがわ) - Right side' },
-        { slug: 'kj-naka', sourceJa: '中', reading: 'Kun: なか | On: チュウ', vi: 'Trung (Trong / Ở giữa)', en: 'Middle / Inside', noteVi: 'Số nét: 4\nBộ thủ: 丨 (Cổn)\nVí dụ:\n- 箱の中 (はこのなか) - Trong hộp\n- 中国 (ちゅうごく) - Trung Quốc\n- 一日中 (いちにちじゅう) - Suốt cả ngày', noteEn: 'Strokes: 4\nRadical: 丨 (Line)\nExamples:\n- 箱の中 (はこのなか) - Inside the box\n- 中国 (ちゅうごく) - China\n- 一日中 (いちにちじゅう) - All day long' },
-        { slug: 'kj-soto', sourceJa: '外', reading: 'Kun: そと, ほか | On: ガイ, ゲ', vi: 'Ngoại (Ngoài / Khác)', en: 'Outside / Other', noteVi: 'Số nét: 5\nBộ thủ: 夕 (Tịch)\nVí dụ:\n- 家の外 (いえのそと) - Ngoài nhà\n- 外国 (がいこく) - Nước ngoài\n- 外国人 (がいこくじん) - Người nước ngoài', noteEn: 'Strokes: 5\nRadical: 夕 (Evening)\nExamples:\n- 家の外 (いえのそと) - Outside the house\n- 外国 (がいこく) - Foreign country\n- 外国人 (がいこくじん) - Foreigner' },
+        {
+          slug: 'kj-ue',
+          sourceJa: '上',
+          reading: 'Kun: うえ, あ.げる | On: ジョウ',
+          vi: 'Thượng (Trên / Lên)',
+          en: 'Up / Above',
+          noteVi:
+            'Số nét: 3\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 机の上 (つくえのうえ) - Trên bàn\n- 上手 (じょうず) - Giỏi\n- 上げる (あげる) - Nâng lên',
+          noteEn:
+            'Strokes: 3\nRadical: 一 (One)\nExamples:\n- 机の上 (つくえのうえ) - On the desk\n- 上手 (じょうず) - Skillful / Good at\n- 上げる (あげる) - To raise',
+        },
+        {
+          slug: 'kj-shita',
+          sourceJa: '下',
+          reading: 'Kun: した, さ.げる | On: カ, ゲ',
+          vi: 'Hạ (Dưới / Xuống)',
+          en: 'Down / Below',
+          noteVi:
+            'Số nét: 3\nBộ thủ: 一 (Nhất)\nVí dụ:\n- 椅子の下 (いすのした) - Dưới ghế\n- 下手 (へた) - Dở, kém\n- 下げる (さげる) - Hạ xuống',
+          noteEn:
+            'Strokes: 3\nRadical: 一 (One)\nExamples:\n- 椅子の下 (いすのした) - Under the chair\n- 下手 (へた) - Unskillful / Bad at\n- 下げる (さげる) - To lower',
+        },
+        {
+          slug: 'kj-hidari',
+          sourceJa: '左',
+          reading: 'Kun: ひだり | On: サ',
+          vi: 'Tả (Bên trái)',
+          en: 'Left',
+          noteVi:
+            'Số nét: 5\nBộ thủ: 工 (Công)\nVí dụ:\n- 左手 (ひだりて) - Tay trái\n- 左折 (させつ) - Rẽ trái\n- 左側 (ひだりがわ) - Phía bên trái',
+          noteEn:
+            'Strokes: 5\nRadical: 工 (Work)\nExamples:\n- 左手 (ひだりて) - Left hand\n- 左折 (させつ) - Left turn\n- 左側 (ひだりがわ) - Left side',
+        },
+        {
+          slug: 'kj-migi',
+          sourceJa: '右',
+          reading: 'Kun: みぎ | On: ウ, ユウ',
+          vi: 'Hữu (Bên phải)',
+          en: 'Right',
+          noteVi:
+            'Số nét: 5\nBộ thủ: 口 (Khẩu)\nVí dụ:\n- 右手 (みぎて) - Tay phải\n- 右折 (うせつ) - Rẽ phải\n- 右側 (みぎがわ) - Phía bên phải',
+          noteEn:
+            'Strokes: 5\nRadical: 口 (Mouth)\nExamples:\n- 右手 (みぎて) - Right hand\n- 右折 (うせつ) - Right turn\n- 右側 (みぎがわ) - Right side',
+        },
+        {
+          slug: 'kj-naka',
+          sourceJa: '中',
+          reading: 'Kun: なか | On: チュウ',
+          vi: 'Trung (Trong / Ở giữa)',
+          en: 'Middle / Inside',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 丨 (Cổn)\nVí dụ:\n- 箱の中 (はこのなか) - Trong hộp\n- 中国 (ちゅうごく) - Trung Quốc\n- 一日中 (いちにちじゅう) - Suốt cả ngày',
+          noteEn:
+            'Strokes: 4\nRadical: 丨 (Line)\nExamples:\n- 箱の中 (はこのなか) - Inside the box\n- 中国 (ちゅうごく) - China\n- 一日中 (いちにちじゅう) - All day long',
+        },
+        {
+          slug: 'kj-soto',
+          sourceJa: '外',
+          reading: 'Kun: そと, ほか | On: ガイ, ゲ',
+          vi: 'Ngoại (Ngoài / Khác)',
+          en: 'Outside / Other',
+          noteVi:
+            'Số nét: 5\nBộ thủ: 夕 (Tịch)\nVí dụ:\n- 家の外 (いえのそと) - Ngoài nhà\n- 外国 (がいこく) - Nước ngoài\n- 外国人 (がいこくじん) - Người nước ngoài',
+          noteEn:
+            'Strokes: 5\nRadical: 夕 (Evening)\nExamples:\n- 家の外 (いえのそと) - Outside the house\n- 外国 (がいこく) - Foreign country\n- 外国人 (がいこくじん) - Foreigner',
+        },
       ],
     },
     {
@@ -1633,13 +2525,83 @@ async function main() {
       descriptionJa: '人、性別、基本的な体の部位を表す漢字を学びます。',
       order: 64,
       items: [
-        { slug: 'kj-hito', sourceJa: '人', reading: 'Kun: ひと | On: ジン, ニン', vi: 'Nhân (Người)', en: 'Person / Human', noteVi: 'Số nét: 2\nBộ thủ: 人 (Nhân)\nVí dụ:\n- あの人 (あのひと) - Người kia\n- 日本人 (にほんじん) - Người Nhật\n- 三人 (さんにん) - Ba người', noteEn: 'Strokes: 2\nRadical: 人 (Person)\nExamples:\n- あの人 (あのひと) - That person\n- 日本人 (にほんじん) - Japanese person\n- 三人 (さんにん) - Three people' },
-        { slug: 'kj-ko', sourceJa: '子', reading: 'Kun: こ | On: シ, ス', vi: 'Tử (Con / Đứa trẻ)', en: 'Child', noteVi: 'Số nét: 3\nBộ thủ: 子 (Tử)\nVí dụ:\n- 子供 (こども) - Trẻ con\n- 女の子 (おんなのこ) - Bé gái\n- 電子 (でんし) - Điện tử', noteEn: 'Strokes: 3\nRadical: 子 (Child)\nExamples:\n- 子供 (こども) - Child / Children\n- 女の子 (おんなのこ) - Girl\n- 電子 (でんし) - Electron / Electronic' },
-        { slug: 'kj-onna', sourceJa: '女', reading: 'Kun: おんな | On: ジョ', vi: 'Nữ (Phụ nữ)', en: 'Woman / Female', noteVi: 'Số nét: 3\nBộ thủ: 女 (Nữ)\nVí dụ:\n- 女の人 (おんなのひと) - Người phụ nữ\n- 彼女 (かのじょ) - Cô ấy / Bạn gái\n- 長女 (ちょうじょ) - Con gái lớn', noteEn: 'Strokes: 3\nRadical: 女 (Woman)\nExamples:\n- 女の人 (おんなのひと) - Woman\n- 彼女 (かのじょ) - She / Girlfriend\n- 長女 (ちょうじょ) - Eldest daughter' },
-        { slug: 'kj-otoko', sourceJa: '男', reading: 'Kun: おとこ | On: ダン, ナン', vi: 'Nam (Đàn ông)', en: 'Man / Male', noteVi: 'Số nét: 7\nBộ thủ: 田 (Điền) + 力 (Lực)\nVí dụ:\n- 男の人 (おとこのひと) - Người đàn ông\n- 男の子 (おとこのこ) - Bé trai\n- 長男 (ちょうなん) - Con trai lớn', noteEn: 'Strokes: 7\nRadical: 田 (Field) + 力 (Power)\nExamples:\n- 男の人 (おとこのひと) - Man\n- 男の子 (おとこのこ) - Boy\n- 長男 (ちょうなん) - Eldest son' },
-        { slug: 'kj-me', sourceJa: '目', reading: 'Kun: め | On: モク', vi: 'Mục (Mắt)', en: 'Eye', noteVi: 'Số nét: 5\nBộ thủ: 目 (Mục)\nVí dụ:\n- 目 (め) - Mắt\n- 目次 (もくじ) - Mục lục\n- 一つ目 (ひとつめ) - Cái thứ nhất', noteEn: 'Strokes: 5\nRadical: 目 (Eye)\nExamples:\n- 目 (め) - Eye\n- 目次 (もくじ) - Table of contents\n- 一つ目 (ひとつめ) - The first (item)' },
-        { slug: 'kj-kuchi', sourceJa: '口', reading: 'Kun: くち, ぐち | On: コウ', vi: 'Khẩu (Miệng / Cửa)', en: 'Mouth / Entrance', noteVi: 'Số nét: 3\nBộ thủ: 口 (Khẩu)\nVí dụ:\n- 口 (くち) - Miệng\n- 入口 (いりぐち) - Lối vào\n- 出口 (でぐち) - Lối ra', noteEn: 'Strokes: 3\nRadical: 口 (Mouth)\nExamples:\n- 口 (くち) - Mouth\n- 入口 (いりぐち) - Entrance\n- 出口 (でぐち) - Exit' },
-        { slug: 'kj-te', sourceJa: '手', reading: 'Kun: て | On: シュ', vi: 'Thủ (Tay)', en: 'Hand', noteVi: 'Số nét: 4\nBộ thủ: 手 (Thủ)\nVí dụ:\n- 手 (て) - Tay\n- 上手 (じょうず) - Giỏi\n- 手紙 (てがみ) - Thư tay', noteEn: 'Strokes: 4\nRadical: 手 (Hand)\nExamples:\n- 手 (て) - Hand\n- 上手 (じょうず) - Skillful\n- 手紙 (てがみ) - Letter' },
+        {
+          slug: 'kj-hito',
+          sourceJa: '人',
+          reading: 'Kun: ひと | On: ジン, ニン',
+          vi: 'Nhân (Người)',
+          en: 'Person / Human',
+          noteVi:
+            'Số nét: 2\nBộ thủ: 人 (Nhân)\nVí dụ:\n- あの人 (あのひと) - Người kia\n- 日本人 (にほんじん) - Người Nhật\n- 三人 (さんにん) - Ba người',
+          noteEn:
+            'Strokes: 2\nRadical: 人 (Person)\nExamples:\n- あの人 (あのひと) - That person\n- 日本人 (にほんじん) - Japanese person\n- 三人 (さんにん) - Three people',
+        },
+        {
+          slug: 'kj-ko',
+          sourceJa: '子',
+          reading: 'Kun: こ | On: シ, ス',
+          vi: 'Tử (Con / Đứa trẻ)',
+          en: 'Child',
+          noteVi:
+            'Số nét: 3\nBộ thủ: 子 (Tử)\nVí dụ:\n- 子供 (こども) - Trẻ con\n- 女の子 (おんなのこ) - Bé gái\n- 電子 (でんし) - Điện tử',
+          noteEn:
+            'Strokes: 3\nRadical: 子 (Child)\nExamples:\n- 子供 (こども) - Child / Children\n- 女の子 (おんなのこ) - Girl\n- 電子 (でんし) - Electron / Electronic',
+        },
+        {
+          slug: 'kj-onna',
+          sourceJa: '女',
+          reading: 'Kun: おんな | On: ジョ',
+          vi: 'Nữ (Phụ nữ)',
+          en: 'Woman / Female',
+          noteVi:
+            'Số nét: 3\nBộ thủ: 女 (Nữ)\nVí dụ:\n- 女の人 (おんなのひと) - Người phụ nữ\n- 彼女 (かのじょ) - Cô ấy / Bạn gái\n- 長女 (ちょうじょ) - Con gái lớn',
+          noteEn:
+            'Strokes: 3\nRadical: 女 (Woman)\nExamples:\n- 女の人 (おんなのひと) - Woman\n- 彼女 (かのじょ) - She / Girlfriend\n- 長女 (ちょうじょ) - Eldest daughter',
+        },
+        {
+          slug: 'kj-otoko',
+          sourceJa: '男',
+          reading: 'Kun: おとこ | On: ダン, ナン',
+          vi: 'Nam (Đàn ông)',
+          en: 'Man / Male',
+          noteVi:
+            'Số nét: 7\nBộ thủ: 田 (Điền) + 力 (Lực)\nVí dụ:\n- 男の人 (おとこのひと) - Người đàn ông\n- 男の子 (おとこのこ) - Bé trai\n- 長男 (ちょうなん) - Con trai lớn',
+          noteEn:
+            'Strokes: 7\nRadical: 田 (Field) + 力 (Power)\nExamples:\n- 男の人 (おとこのひと) - Man\n- 男の子 (おとこのこ) - Boy\n- 長男 (ちょうなん) - Eldest son',
+        },
+        {
+          slug: 'kj-me',
+          sourceJa: '目',
+          reading: 'Kun: め | On: モク',
+          vi: 'Mục (Mắt)',
+          en: 'Eye',
+          noteVi:
+            'Số nét: 5\nBộ thủ: 目 (Mục)\nVí dụ:\n- 目 (め) - Mắt\n- 目次 (もくじ) - Mục lục\n- 一つ目 (ひとつめ) - Cái thứ nhất',
+          noteEn:
+            'Strokes: 5\nRadical: 目 (Eye)\nExamples:\n- 目 (め) - Eye\n- 目次 (もくじ) - Table of contents\n- 一つ目 (ひとつめ) - The first (item)',
+        },
+        {
+          slug: 'kj-kuchi',
+          sourceJa: '口',
+          reading: 'Kun: くち, ぐち | On: コウ',
+          vi: 'Khẩu (Miệng / Cửa)',
+          en: 'Mouth / Entrance',
+          noteVi:
+            'Số nét: 3\nBộ thủ: 口 (Khẩu)\nVí dụ:\n- 口 (くち) - Miệng\n- 入口 (いりぐち) - Lối vào\n- 出口 (でぐち) - Lối ra',
+          noteEn:
+            'Strokes: 3\nRadical: 口 (Mouth)\nExamples:\n- 口 (くち) - Mouth\n- 入口 (いりぐち) - Entrance\n- 出口 (でぐち) - Exit',
+        },
+        {
+          slug: 'kj-te',
+          sourceJa: '手',
+          reading: 'Kun: て | On: シュ',
+          vi: 'Thủ (Tay)',
+          en: 'Hand',
+          noteVi:
+            'Số nét: 4\nBộ thủ: 手 (Thủ)\nVí dụ:\n- 手 (て) - Tay\n- 上手 (じょうず) - Giỏi\n- 手紙 (てがみ) - Thư tay',
+          noteEn:
+            'Strokes: 4\nRadical: 手 (Hand)\nExamples:\n- 手 (て) - Hand\n- 上手 (じょうず) - Skillful\n- 手紙 (てがみ) - Letter',
+        },
       ],
     },
     {
@@ -1652,12 +2614,72 @@ async function main() {
       descriptionJa: '日常の基本的な動作を表す漢字を学びます。',
       order: 65,
       items: [
-        { slug: 'kj-iku', sourceJa: '行', reading: 'Kun: い.く, おこな.う | On: コウ, ギョウ', vi: 'Hành (Đi / Tổ chức)', en: 'Go / Conduct', noteVi: 'Số nét: 6\nBộ thủ: 行 (Hành)\nVí dụ:\n- 行く (いく) - Đi\n- 旅行 (りょこう) - Du lịch\n- 行事 (ぎょうじ) - Sự kiện', noteEn: 'Strokes: 6\nRadical: 行 (Go)\nExamples:\n- 行く (いく) - To go\n- 旅行 (りょこう) - Travel / Trip\n- 行事 (ぎょうじ) - Event' },
-        { slug: 'kj-kuru', sourceJa: '来', reading: 'Kun: く.る, きた.る | On: ライ', vi: 'Lai (Đến / Tương lai)', en: 'Come / Future', noteVi: 'Số nét: 7\nBộ thủ: 木 (Mộc)\nVí dụ:\n- 来る (くる) - Đến\n- 来月 (らいげつ) - Tháng sau\n- 来年 (らいねん) - Năm sau', noteEn: 'Strokes: 7\nRadical: 木 (Tree)\nExamples:\n- 来る (くる) - To come\n- 来月 (らいげつ) - Next month\n- 来年 (らいねん) - Next year' },
-        { slug: 'kj-taberu', sourceJa: '食', reading: 'Kun: た.べる | On: ショク', vi: 'Thực (Ăn / Thực phẩm)', en: 'Eat / Food', noteVi: 'Số nét: 9\nBộ thủ: 食 (Thực)\nVí dụ:\n- 食べる (たべる) - Ăn\n- 食事 (しょくじ) - Bữa ăn\n- 食べ物 (たべもの) - Đồ ăn', noteEn: 'Strokes: 9\nRadical: 食 (Food)\nExamples:\n- 食べる (たべる) - To eat\n- 食事 (しょくじ) - Meal\n- 食べ物 (たべもの) - Food' },
-        { slug: 'kj-nomu', sourceJa: '飲', reading: 'Kun: の.む | On: イン', vi: 'Ẩm (Uống)', en: 'Drink', noteVi: 'Số nét: 12\nBộ thủ: 食 (Thực)\nVí dụ:\n- 飲む (のむ) - Uống\n- 飲み物 (のみもの) - Đồ uống\n- 飲食店 (いんしょくてん) - Quán ăn uống', noteEn: 'Strokes: 12\nRadical: 食 (Food)\nExamples:\n- 飲む (のむ) - To drink\n- 飲み物 (のみもの) - Beverage / Drink\n- 飲食店 (いんしょくてん) - Restaurant / Diner' },
-        { slug: 'kj-miru', sourceJa: '見', reading: 'Kun: み.る, み.せる | On: ケン', vi: 'Kiến (Nhìn / Xem / Cho xem)', en: 'See / Look / Show', noteVi: 'Số nét: 7\nBộ thủ: 見 (Kiến)\nVí dụ:\n- 見る (みる) - Nhìn, xem\n- 見せる (みせる) - Cho xem\n- 見学 (けんがく) - Kiến tập', noteEn: 'Strokes: 7\nRadical: 見 (See)\nExamples:\n- 見る (みる) - To see / watch\n- 見せる (みせる) - To show\n- 見学 (けんがく) - Study visit / Inspection' },
-        { slug: 'kj-kiku', sourceJa: '聞', reading: 'Kun: き.く, き.こえる | On: ブン, モン', vi: 'Văn (Nghe / Hỏi)', en: 'Hear / Listen / Ask', noteVi: 'Số nét: 14\nBộ thủ: 門 (Môn) + 耳 (Nhĩ)\nVí dụ:\n- 聞く (きく) - Nghe\n- 新聞 (しんぶん) - Báo chí\n- 聞こえる (きこえる) - Có thể nghe thấy', noteEn: 'Strokes: 14\nRadical: 門 (Gate) + 耳 (Ear)\nExamples:\n- 聞く (きく) - To hear / listen / ask\n- 新聞 (しんぶん) - Newspaper\n- 聞こえる (きこえる) - To be audible' },
+        {
+          slug: 'kj-iku',
+          sourceJa: '行',
+          reading: 'Kun: い.く, おこな.う | On: コウ, ギョウ',
+          vi: 'Hành (Đi / Tổ chức)',
+          en: 'Go / Conduct',
+          noteVi:
+            'Số nét: 6\nBộ thủ: 行 (Hành)\nVí dụ:\n- 行く (いく) - Đi\n- 旅行 (りょこう) - Du lịch\n- 行事 (ぎょうじ) - Sự kiện',
+          noteEn:
+            'Strokes: 6\nRadical: 行 (Go)\nExamples:\n- 行く (いく) - To go\n- 旅行 (りょこう) - Travel / Trip\n- 行事 (ぎょうじ) - Event',
+        },
+        {
+          slug: 'kj-kuru',
+          sourceJa: '来',
+          reading: 'Kun: く.る, きた.る | On: ライ',
+          vi: 'Lai (Đến / Tương lai)',
+          en: 'Come / Future',
+          noteVi:
+            'Số nét: 7\nBộ thủ: 木 (Mộc)\nVí dụ:\n- 来る (くる) - Đến\n- 来月 (らいげつ) - Tháng sau\n- 来年 (らいねん) - Năm sau',
+          noteEn:
+            'Strokes: 7\nRadical: 木 (Tree)\nExamples:\n- 来る (くる) - To come\n- 来月 (らいげつ) - Next month\n- 来年 (らいねん) - Next year',
+        },
+        {
+          slug: 'kj-taberu',
+          sourceJa: '食',
+          reading: 'Kun: た.べる | On: ショク',
+          vi: 'Thực (Ăn / Thực phẩm)',
+          en: 'Eat / Food',
+          noteVi:
+            'Số nét: 9\nBộ thủ: 食 (Thực)\nVí dụ:\n- 食べる (たべる) - Ăn\n- 食事 (しょくじ) - Bữa ăn\n- 食べ物 (たべもの) - Đồ ăn',
+          noteEn:
+            'Strokes: 9\nRadical: 食 (Food)\nExamples:\n- 食べる (たべる) - To eat\n- 食事 (しょくじ) - Meal\n- 食べ物 (たべもの) - Food',
+        },
+        {
+          slug: 'kj-nomu',
+          sourceJa: '飲',
+          reading: 'Kun: の.む | On: イン',
+          vi: 'Ẩm (Uống)',
+          en: 'Drink',
+          noteVi:
+            'Số nét: 12\nBộ thủ: 食 (Thực)\nVí dụ:\n- 飲む (のむ) - Uống\n- 飲み物 (のみもの) - Đồ uống\n- 飲食店 (いんしょくてん) - Quán ăn uống',
+          noteEn:
+            'Strokes: 12\nRadical: 食 (Food)\nExamples:\n- 飲む (のむ) - To drink\n- 飲み物 (のみもの) - Beverage / Drink\n- 飲食店 (いんしょくてん) - Restaurant / Diner',
+        },
+        {
+          slug: 'kj-miru',
+          sourceJa: '見',
+          reading: 'Kun: み.る, み.せる | On: ケン',
+          vi: 'Kiến (Nhìn / Xem / Cho xem)',
+          en: 'See / Look / Show',
+          noteVi:
+            'Số nét: 7\nBộ thủ: 見 (Kiến)\nVí dụ:\n- 見る (みる) - Nhìn, xem\n- 見せる (みせる) - Cho xem\n- 見学 (けんがく) - Kiến tập',
+          noteEn:
+            'Strokes: 7\nRadical: 見 (See)\nExamples:\n- 見る (みる) - To see / watch\n- 見せる (みせる) - To show\n- 見学 (けんがく) - Study visit / Inspection',
+        },
+        {
+          slug: 'kj-kiku',
+          sourceJa: '聞',
+          reading: 'Kun: き.く, き.こえる | On: ブン, モン',
+          vi: 'Văn (Nghe / Hỏi)',
+          en: 'Hear / Listen / Ask',
+          noteVi:
+            'Số nét: 14\nBộ thủ: 門 (Môn) + 耳 (Nhĩ)\nVí dụ:\n- 聞く (きく) - Nghe\n- 新聞 (しんぶん) - Báo chí\n- 聞こえる (きこえる) - Có thể nghe thấy',
+          noteEn:
+            'Strokes: 14\nRadical: 門 (Gate) + 耳 (Ear)\nExamples:\n- 聞く (きく) - To hear / listen / ask\n- 新聞 (しんぶん) - Newspaper\n- 聞こえる (きこえる) - To be audible',
+        },
       ],
     },
   ];

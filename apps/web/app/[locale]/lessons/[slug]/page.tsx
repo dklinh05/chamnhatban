@@ -187,9 +187,7 @@ export default function LessonDetailPage() {
                   <div key={item.id} className="vocab-card">
                     <div className="vocab-word-row">
                       <span className="vocab-word">{item.sourceJa}</span>
-                      {item.reading && (
-                        <span className="vocab-furigana">({item.reading})</span>
-                      )}
+                      {item.reading && <span className="vocab-furigana">({item.reading})</span>}
                       <button
                         onClick={() => speakWord(item.sourceJa)}
                         className="vocab-tts-btn"
@@ -237,9 +235,7 @@ export default function LessonDetailPage() {
                     </div>
                     <div className="grammar-structure-box">
                       <span className="grammar-structure">{item.sourceJa}</span>
-                      {item.reading && (
-                        <span className="grammar-reading">({item.reading})</span>
-                      )}
+                      {item.reading && <span className="grammar-reading">({item.reading})</span>}
                     </div>
                     <div className="grammar-meaning">
                       <span className="grammar-meaning-label">Ý nghĩa:</span>
@@ -346,7 +342,10 @@ export default function LessonDetailPage() {
         </section>
 
         {/* Complete Action Button */}
-        <section className="lesson-actions" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+        <section
+          className="lesson-actions"
+          style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}
+        >
           <button
             onClick={handleComplete}
             disabled={isCompleting}
